@@ -1,0 +1,22 @@
+{
+  "dataset": "skills/roblox-luau-assistant/references/dataset/manifest.json",
+  "format": "domain shards (<=55 KB each) + manifest.json + search_dataset.py",
+  "code_entries_checked": 435,
+  "qa_entries_skipped": 72,
+  "checks_executed": [
+    "scripts/luau_parser.py full parse",
+    "scripts/lint_rules.py rule lint",
+    "scripts/dedupe_report.py near-duplicate clusters"
+  ],
+  "syntax_and_lint_failures": 0,
+  "lint_warnings_only": 14,
+  "near_duplicate": {
+    "threshold": 0.85,
+    "clusters": 31,
+    "effectively_unique_code_entries": 210
+  },
+  "status": "SYNTAX_AND_LINT_CHECKED_ONLY",
+  "strong_analyzer": "ANALYZER_UNAVAILABLE",
+  "runtime_verified": false,
+  "rule": "Syntax and lint checked is not type checked and not runtime verified. Only code-bearing entries are parsed; prose is never classified as Luau."
+}

@@ -1,0 +1,35 @@
+name: Luau validation truth gate
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.x'}
+      - name: Run every test (parser, corpus, UI lint, lint rules, receipts)
+        run: python tests/run_all.py
+      - name: Dataset syntax + lint (no external tools)
+        run: python scripts/validate_dataset.py skills/roblox-luau-assistant/references/dataset
+      - name: Acceptance benchmark (repair-loop demo; exit 2 = host bridge unavailable, expected)
+        run: python scripts/acceptance_benchmark.py || [ $? -eq 2 ]
+
+  analyzer:
+    # Real analyzer job. It is SKIPPED (not green) until a repository variable GLOBAL_TYPES_URL points to globalTypes.d.luau.
+    if: ${{ vars.GLOBAL_TYPES_URL != '' }}
+    needs: tests
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GLOBAL_TYPES_URL: ${{ vars.GLOBAL_TYPES_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.x'}
+      - run: curl -fsSL "$GLOBAL_TYPES_URL" -o globalTypes.d.luau
+      - name: Download luau-lsp (check the asset name on its releases page if this fails)
+        run: |
+          gh release download --repo JohnnyMorganz/luau-lsp --pattern '*linux*' --dir bin
+          cd bin && unzip -o *.zip && chmod +x luau-lsp && ./luau-lsp --version
+      - run: python scripts/validate_dataset.py skills/roblox-luau-assistant/references/dataset --analyzer "$PWD/bin/luau-lsp analyze" --types globalTypes.d.luau

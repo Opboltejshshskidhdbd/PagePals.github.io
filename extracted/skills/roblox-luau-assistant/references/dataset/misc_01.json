@@ -1,0 +1,80 @@
+[
+ {
+  "instruction": "Create an anime-style domain expansion sphere that grows quickly and fades out.",
+  "input": "",
+  "output": "local TweenService = game:GetService('TweenService')\nlocal Debris = game:GetService('Debris')\n\nlocal function domainSphere(position, radius, color)\n    local sphere = Instance.new('Part')\n    sphere.Shape = Enum.PartType.Ball\n    sphere.Anchored = true\n    sphere.CanCollide = false\n    sphere.CanQuery = false\n    sphere.CanTouch = false\n    sphere.Material = Enum.Material.ForceField\n    sphere.Color = color or Color3.fromRGB(90, 0, 160)\n    sphere.Size = Vector3.one\n    sphere.Position = position\n    sphere.Parent = workspace\n\n    local grow = TweenService:Create(sphere, TweenInfo.new(0.6, Enum.EasingStyle.Exponential, Enum.EasingDirection.Out), {Size = Vector3.one * radius * 2})\n    grow:Play()\n    grow.Completed:Once(function()\n        TweenService:Create(sphere, TweenInfo.new(1.5), {Transparency = 1}):Play()\n    end)\n    Debris:AddItem(sphere, 2.5)\nend",
+  "id": "rb-0028"
+ },
+ {
+  "instruction": "How do I reduce rendering cost from lots of parts in a Roblox map?",
+  "input": "",
+  "output": "Reduce part count by merging decorative geometry into MeshParts, set CanCollide, CanQuery and CanTouch to false on decoration, and use Box or Hull collision fidelity on complex meshes instead of Default or Precise. Avoid large areas of overlapping transparent surfaces (overdraw), reuse the same meshes and textures so they can be instanced, and rely on StreamingEnabled and distance culling for large worlds.",
+  "id": "rb-0429"
+ },
+ {
+  "instruction": "How can I reduce texture and UI image memory in Roblox?",
+  "input": "",
+  "output": "Use sprite sheets and ImageRectOffset/ImageRectSize so many icons share one image, avoid uploading textures larger than needed for how large they appear, reuse the same asset ids so they are shared in memory, and avoid stacking big semi-transparent images. Preload only what the current screen needs.",
+  "id": "rb-0449"
+ },
+ {
+  "instruction": "Why use Rojo for Roblox development?",
+  "input": "",
+  "output": "Rojo syncs a filesystem project to Roblox Studio, so scripts live as normal files you can version with git, review in pull requests, edit in VS Code, lint and format. It enables CI and package managers like Wally, and avoids merge problems from editing the place file directly. A project.json maps folders to services.",
+  "id": "rb-0455"
+ },
+ {
+  "instruction": "Why is it recommended to set Parent last when creating Instances?",
+  "input": "",
+  "output": "Setting properties before parenting avoids triggering replication, rendering and event work repeatedly for each property while the object is already in the workspace. Create the instance, set every property, then assign Parent once. Avoid the second argument of Instance.new, which parents too early.",
+  "id": "rb-0466"
+ },
+ {
+  "instruction": "When should I use ContextActionService instead of UserInputService?",
+  "input": "",
+  "output": "ContextActionService binds named actions with priorities, can create mobile touch buttons, and lets you sink input so UI or other actions do not double-handle it, which makes gamepad and mobile support easier. UserInputService is better for raw input streams such as mouse delta or custom gesture handling.",
+  "id": "rb-0473"
+ },
+ {
+  "instruction": "How does localization work in Roblox?",
+  "input": "",
+  "output": "LocalizationService uses translation tables (CSV or in-experience tables) keyed by source strings, with automatic text capture available. Use placeholders and format strings instead of concatenating sentences, avoid text baked into images, leave extra room in UI for longer languages and consider right-to-left languages. Test by forcing the locale in Studio.",
+  "id": "rb-0478"
+ },
+ {
+  "instruction": "How should a team collaborate on a Roblox project?",
+  "input": "",
+  "output": "Use Rojo and git for scripts so changes are reviewed and mergeable, use Team Create for building and place assets, avoid editing the same script in two places, keep a separate development place and the live place, and publish through a controlled process. Document module APIs and use linting and formatting in CI.",
+  "id": "rb-0480"
+ },
+ {
+  "instruction": "My client script hangs forever on startup sometimes. Diagnose and fix.",
+  "input": "local remote = game.ReplicatedStorage:WaitForChild('AbilityRemote')\nlocal config = game.ReplicatedStorage:WaitForChild('Config')\nremote.OnClientEvent:Connect(handle)",
+  "output": "Problem: WaitForChild without a timeout yields forever (with only an infinite-yield warning) if the object is misnamed or never created, so the rest of the script never runs. Add timeouts and handle nil explicitly.\n\nFixed version:\n\nlocal ReplicatedStorage = game:GetService('ReplicatedStorage')\n\nlocal function require_child(parent, name, timeout)\n    local child = parent:WaitForChild(name, timeout or 10)\n    if not child then\n        error(('Missing %s under %s'):format(name, parent:GetFullName()), 2)\n    end\n    return child\nend\n\nlocal remote = require_child(ReplicatedStorage, 'AbilityRemote')\nlocal config = require_child(ReplicatedStorage, 'Config')\nremote.OnClientEvent:Connect(handle)",
+  "id": "rb-0485"
+ },
+ {
+  "instruction": "Some enemies are skipped when they die. Fix this removal loop.",
+  "input": "for i, enemy in ipairs(enemies) do\n    if enemy.Health <= 0 then\n        table.remove(enemies, i)\n    end\nend",
+  "output": "Problem: removing an element while iterating forward shifts the following elements down, so the next element is skipped. Iterate backwards when removing.\n\nFixed version:\n\nfor i = #enemies, 1, -1 do\n    if enemies[i].Health <= 0 then\n        table.remove(enemies, i)\n    end\nend",
+  "id": "rb-0487"
+ },
+ {
+  "instruction": "Building this chat log string is slow and creates a lot of garbage. Improve it.",
+  "input": "local text = ''\nfor _, message in messages do\n    text = text .. message.Author .. ': ' .. message.Text .. '\\n'\nend",
+  "output": "Problem: each concatenation creates a new string and copies all previous content, so the cost grows quadratically. Collect parts in a table and join once.\n\nFixed version:\n\nlocal lines = table.create(#messages)\nfor i, message in messages do\n    lines[i] = message.Author .. ': ' .. message.Text\nend\nlocal text = table.concat(lines, '\\n')",
+  "id": "rb-0491"
+ },
+ {
+  "instruction": "leaderstats sometimes shows 0 and data occasionally fails to load. Fix this player-join code.",
+  "input": "Players.PlayerAdded:Connect(function(player)\n    local stats = Instance.new('Folder', player)\n    stats.Name = 'leaderstats'\n    local coins = Instance.new('IntValue', stats)\n    coins.Name = 'Coins'\n    coins.Value = store:GetAsync(player.UserId)\nend)",
+  "output": "Problems: GetAsync can error and is not wrapped in pcall, the leaderstats folder is parented before its children exist, and a failed load would silently leave 0 which could later be saved over real data.\n\nFixed version:\n\nPlayers.PlayerAdded:Connect(function(player)\n    local stats = Instance.new('Folder')\n    stats.Name = 'leaderstats'\n\n    local coins = Instance.new('IntValue')\n    coins.Name = 'Coins'\n    coins.Value = 0\n    coins.Parent = stats\n    stats.Parent = player  -- create first with defaults so the leaderboard exists immediately\n\n    local ok, saved = pcall(function()\n        return store:GetAsync(tostring(player.UserId))\n    end)\n\n    if ok then\n        coins.Value = saved or 0\n        player:SetAttribute('DataLoaded', true)\n    else\n        warn('Load failed for ' .. player.Name .. ': ' .. tostring(saved))\n        -- do NOT mark DataLoaded, and do NOT save this player's data on leave\n    end\nend)",
+  "id": "rb-0494"
+ },
+ {
+  "instruction": "This gamepass check breaks the script when Roblox services are slow. Fix it.",
+  "input": "local owns = MarketplaceService:UserOwnsGamePassAsync(player.UserId, PASS_ID)\nif owns then\n    giveVIP(player)\nend",
+  "output": "Problem: UserOwnsGamePassAsync can throw on network or service errors and it yields, so the thread can error. Wrap it in pcall, retry, and cache the result so you do not call it repeatedly.\n\nFixed version:\n\nlocal MarketplaceService = game:GetService('MarketplaceService')\nlocal ownsCache = {}\n\nlocal function ownsPass(player, passId)\n    local key = player.UserId .. ':' .. passId\n    if ownsCache[key] ~= nil then\n        return ownsCache[key]\n    end\n    for attempt = 1, 3 do\n        local ok, owns = pcall(MarketplaceService.UserOwnsGamePassAsync, MarketplaceService, player.UserId, passId)\n        if ok then\n            ownsCache[key] = owns\n            return owns\n        end\n        task.wait(attempt)\n    end\n    return false\nend\n\nif ownsPass(player, PASS_ID) then\n    giveVIP(player)\nend",
+  "id": "rb-0495"
+ }
+]
