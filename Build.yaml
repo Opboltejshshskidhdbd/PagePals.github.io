@@ -3,20 +3,38 @@ name: Extract Claude ZIP
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   extract:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Extract ZIP
+      - name: Extract ZIP into repository folder
         run: |
-          mkdir extracted
-          unzip -q roblox-luau-assistant-1.12.0-gate.zip -d extracted
+          rm -rf extracted-luau-gate
+          mkdir -p extracted-luau-gate
+          unzip -q roblox-luau-assistant-1.12.0-gate.zip -d extracted-luau-gate
 
-      - name: Upload extracted files
+      - name: Commit extracted files to repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A extracted-luau-gate
+
+          if git diff --cached --quiet; then
+            echo "No extracted-file changes to commit."
+          else
+            git commit -m "Extract Roblox Dev Master gate ZIP"
+            git push
+          fi
+
+      - name: Upload extracted files as artifact
         uses: actions/upload-artifact@v4
         with:
           name: claude-plugin-extracted
-          path: extracted/
+          path: extracted-luau-gate/
