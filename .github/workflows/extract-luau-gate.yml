@@ -1,0 +1,62 @@
+name: Extract Roblox Dev Master ZIP
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    name: Extract Claude Plugin Package
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify ZIP exists
+        run: |
+          test -f roblox-luau-assistant-1.12.0-gate.zip
+          echo "ZIP found."
+
+      - name: Prepare extraction directory
+        run: |
+          rm -rf extracted-luau-gate
+          mkdir -p extracted-luau-gate
+
+      - name: Extract ZIP
+        run: |
+          unzip -q roblox-luau-assistant-1.12.0-gate.zip -d extracted-luau-gate
+          echo "ZIP extracted successfully."
+          find extracted-luau-gate -type f | sort
+
+      - name: Show extracted file count
+        run: |
+          COUNT=$(find extracted-luau-gate -type f | wc -l)
+          echo "Extracted files: $COUNT"
+
+          if [ "$COUNT" -eq 0 ]; then
+            echo "ERROR: ZIP extracted but contains no files."
+            exit 1
+          fi
+
+      - name: Commit extracted files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add extracted-luau-gate/
+
+          if git diff --cached --quiet; then
+            echo "No new extracted files to commit."
+          else
+            git commit -m "Extract Roblox Dev Master gate package"
+            git push
+          fi
+
+      - name: Upload extraction artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: roblox-dev-master-extracted
+          path: extracted-luau-gate/
