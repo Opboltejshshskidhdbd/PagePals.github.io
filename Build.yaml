@@ -1,0 +1,22 @@
+name: Extract Claude ZIP
+
+on:
+  workflow_dispatch:
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Extract ZIP
+        run: |
+          mkdir extracted
+          unzip -q roblox-luau-assistant-1.12.0-gate.zip -d extracted
+
+      - name: Upload extracted files
+        uses: actions/upload-artifact@v4
+        with:
+          name: claude-plugin-extracted
+          path: extracted/
