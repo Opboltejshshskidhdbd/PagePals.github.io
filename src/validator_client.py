@@ -9,8 +9,6 @@ class ValidatorError(Exception):
         super().__init__(message)
 
 async def validate_luau_source(code: str) -> dict:
-    # 1. Enforce max size limit (200 KB)
-    # Using encode('utf-8') to get actual byte size, not character count.
     if len(code.encode('utf-8')) > MAX_SOURCE_SIZE_BYTES:
         raise ValidatorError(
             "EXTERNAL_VALIDATION_INPUT_TOO_LARGE", 
@@ -26,11 +24,7 @@ async def validate_luau_source(code: str) -> dict:
     try:
         async with httpx.AsyncClient(timeout=REQUEST_TIMEOUT_SECONDS) as client:
             response = await client.post(VALIDATOR_URL, json=payload, headers=headers)
-            
-            # Check for HTTP errors (e.g., 500, 404, 502)
             response.raise_for_status()
-            
-            # Attempt to parse JSON response
             return response.json()
 
     except httpx.TimeoutException:
@@ -53,4 +47,3 @@ async def validate_luau_source(code: str) -> dict:
             "EXTERNAL_VALIDATION_INVALID_RESPONSE", 
             "Upstream validator returned malformed JSON."
         )
-      
