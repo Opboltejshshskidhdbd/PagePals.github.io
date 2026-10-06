@@ -1,0 +1,154 @@
+{
+ "threshold": 0.85,
+ "code_entries": 435,
+ "near_duplicate_pairs": 1310,
+ "clusters": 31,
+ "entries_in_clusters": 256,
+ "effective_unique_entries": 210,
+ "largest_clusters": [
+  {
+   "size": 21,
+   "example": "Write a Luau function for a continuous fire aura ParticleEmitter around a character.",
+   "ids": [
+    "rb-0042",
+    "rb-0045",
+    "rb-0048",
+    "rb-0051",
+    "rb-0054",
+    "rb-0057"
+   ]
+  },
+  {
+   "size": 21,
+   "example": "Create a one-shot fire impact burst for a hit effect in Roblox.",
+   "ids": [
+    "rb-0043",
+    "rb-0046",
+    "rb-0049",
+    "rb-0052",
+    "rb-0055",
+    "rb-0058"
+   ]
+  },
+  {
+   "size": 14,
+   "example": "Create a fire bolt part with attachments and a Trail object.",
+   "ids": [
+    "rb-0170",
+    "rb-0178",
+    "rb-0186",
+    "rb-0194",
+    "rb-0202",
+    "rb-0210"
+   ]
+  },
+  {
+   "size": 14,
+   "example": "Write a fire shockwave ring effect using TweenService and Debris.",
+   "ids": [
+    "rb-0171",
+    "rb-0179",
+    "rb-0187",
+    "rb-0195",
+    "rb-0203",
+    "rb-0211"
+   ]
+  },
+  {
+   "size": 14,
+   "example": "Write a fire channeling effect with inward particles and a growing PointLight.",
+   "ids": [
+    "rb-0172",
+    "rb-0180",
+    "rb-0188",
+    "rb-0196",
+    "rb-0204",
+    "rb-0212"
+   ]
+  },
+  {
+   "size": 14,
+   "example": "Make an anime-style fire summoning circle pulse with multiple rings.",
+   "ids": [
+    "rb-0173",
+    "rb-0181",
+    "rb-0189",
+    "rb-0197",
+    "rb-0205",
+    "rb-0213"
+   ]
+  },
+  {
+   "size": 14,
+   "example": "Create a fire beam attack using a Beam between two attachments that narrows to nothing.",
+   "ids": [
+    "rb-0174",
+    "rb-0182",
+    "rb-0190",
+    "rb-0198",
+    "rb-0206",
+    "rb-0214"
+   ]
+  },
+  {
+   "size": 14,
+   "example": "Create a layered fire explosion effect function for Roblox with multiple elements.",
+   "ids": [
+    "rb-0175",
+    "rb-0183",
+    "rb-0191",
+    "rb-0199",
+    "rb-0207",
+    "rb-0215"
+   ]
+  },
+  {
+   "size": 12,
+   "example": "Write a server-authoritative hitscan script for the Pistol in Luau with spread, distance falloff, headshot mul",
+   "ids": [
+    "rb-0380",
+    "rb-0381",
+    "rb-0382",
+    "rb-0383",
+    "rb-0384",
+    "rb-0385"
+   ]
+  },
+  {
+   "size": 8,
+   "example": "Write the server-side Luau ability module for 'Meteor Strike', a area-of-effect fire ability, with validation,",
+   "ids": [
+    "rb-0280",
+    "rb-0282",
+    "rb-0284",
+    "rb-0286",
+    "rb-0288",
+    "rb-0290"
+   ]
+  },
+  {
+   "size": 8,
+   "example": "Write the client-side VFX handler for the fire-themed area-of-effect ability 'Meteor Strike' that listens to V",
+   "ids": [
+    "rb-0281",
+    "rb-0283",
+    "rb-0285",
+    "rb-0287",
+    "rb-0289",
+    "rb-0291"
+   ]
+  },
+  {
+   "size": 8,
+   "example": "Write the server-side Luau ability module for 'Fireball', a projectile fire ability, with validation, cooldown",
+   "ids": [
+    "rb-0324",
+    "rb-0326",
+    "rb-0328",
+    "rb-0330",
+    "rb-0332",
+    "rb-0334"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,62 @@
+[
+ {
+  "instruction": "Write an idempotent MarketplaceService.ProcessReceipt handler in Luau that never double-grants and retries safely.",
+  "input": "",
+  "output": "local Players = game:GetService('Players')\nlocal MarketplaceService = game:GetService('MarketplaceService')\nlocal DataStoreService = game:GetService('DataStoreService')\n\nlocal receiptStore = DataStoreService:GetDataStore('Receipts_v1')\n\nlocal grantHandlers = {\n    [1234567] = function(player)  -- 500 coins\n        player:SetAttribute('Coins', (player:GetAttribute('Coins') or 0) + 500)\n    end,\n}\n\nMarketplaceService.ProcessReceipt = function(receiptInfo)\n    local player = Players:GetPlayerByUserId(receiptInfo.PlayerId)\n    if not player then\n        return Enum.ProductPurchaseDecision.NotProcessedYet  -- Roblox retries when they rejoin\n    end\n\n    local key = ('%d_%d'):format(receiptInfo.PlayerId, receiptInfo.PurchaseId)\n\n    local ok, alreadyGranted = pcall(function()\n        return receiptStore:GetAsync(key)\n    end)\n    if not ok then\n        return Enum.ProductPurchaseDecision.NotProcessedYet\n    end\n    if alreadyGranted then\n        return Enum.ProductPurchaseDecision.PurchaseGranted\n    end\n\n    local handler = grantHandlers[receiptInfo.ProductId]\n    if not handler then\n        warn('No handler for product ' .. receiptInfo.ProductId)\n        return Enum.ProductPurchaseDecision.NotProcessedYet\n    end\n\n    local granted = pcall(handler, player)\n    if not granted then\n        return Enum.ProductPurchaseDecision.NotProcessedYet\n    end\n\n    local recorded = pcall(function()\n        receiptStore:SetAsync(key, true)\n    end)\n    if not recorded then\n        -- grant happened but we could not record it; fail so the retry sees it (make handlers idempotent per key)\n        return Enum.ProductPurchaseDecision.NotProcessedYet\n    end\n    return Enum.ProductPurchaseDecision.PurchaseGranted\nend\n-- Best practice: store the receipt id inside the player's profile and grant + record in the same UpdateAsync.",
+  "id": "rb-0128"
+ },
+ {
+  "instruction": "Build a global leaderboard in Luau with OrderedDataStore: update scores safely, page the top 100 and cache usernames.",
+  "input": "",
+  "output": "local DataStoreService = game:GetService('DataStoreService')\nlocal Players = game:GetService('Players')\nlocal ReplicatedStorage = game:GetService('ReplicatedStorage')\n\nlocal updateRemote = ReplicatedStorage:WaitForChild('LeaderboardUpdate')  -- RemoteEvent created in Studio\n\nlocal board = DataStoreService:GetOrderedDataStore('Leaderboard_Wins_v1')\nlocal nameCache = {}\n\nlocal function getName(userId)\n    if nameCache[userId] then return nameCache[userId] end\n    local ok, name = pcall(Players.GetNameFromUserIdAsync, Players, userId)\n    nameCache[userId] = ok and name or ('User' .. userId)\n    return nameCache[userId]\nend\n\nlocal function submitScore(userId, score)\n    if type(score) ~= 'number' or score < 0 then return end\n    pcall(function()\n        board:UpdateAsync(tostring(userId), function(old)\n            if old and old >= score then\n                return nil  -- keep the higher score\n            end\n            return math.floor(score)\n        end)\n    end)\nend\n\nlocal function fetchTop(count)\n    local ok, pages = pcall(function()\n        return board:GetSortedAsync(false, math.min(count, 100))\n    end)\n    if not ok then return nil end\n\n    local entries = {}\n    for _, page in pages:GetCurrentPage() do\n        table.insert(entries, {\n            Rank = #entries + 1,\n            UserId = tonumber(page.key),\n            Name = getName(tonumber(page.key)),\n            Score = page.value,\n        })\n    end\n    return entries\nend\n\n-- Refresh on an interval (budget friendly) and replicate to clients via a RemoteEvent or attribute\ntask.spawn(function()\n    while true do\n        local top = fetchTop(50)\n        if top then\n            updateRemote:FireAllClients(top)  -- clients render the list; late joiners should request the cached copy\n        end\n        task.wait(60)\n    end\nend)\n\nreturn {Submit = submitScore, FetchTop = fetchTop}",
+  "id": "rb-0129"
+ },
+ {
+  "instruction": "Write a simple matchmaking queue in Luau using MemoryStoreService that groups 4 players and teleports them to a reserved server.",
+  "input": "",
+  "output": "local MemoryStoreService = game:GetService('MemoryStoreService')\nlocal Players = game:GetService('Players')\nlocal TeleportService = game:GetService('TeleportService')\n\nlocal queue = MemoryStoreService:GetQueue('MatchQueue_v1')\nlocal MATCH_SIZE = 4\nlocal ITEM_TTL = 60\nlocal MATCH_PLACE_ID = 0  -- set to your match place id\n\nlocal function joinQueue(player)\n    local ok, err = pcall(function()\n        queue:AddAsync({userId = player.UserId}, ITEM_TTL)\n    end)\n    return ok\nend\n\nlocal function matchLoop()\n    while true do\n        local ok, items, readId = pcall(function()\n            -- allOrNothing = true: only returns when MATCH_SIZE items are available\n            return queue:ReadAsync(MATCH_SIZE, true, 5)\n        end)\n\n        if ok and items and #items == MATCH_SIZE then\n            local localPlayers, userIds = {}, {}\n            for _, item in items do\n                table.insert(userIds, item.userId)\n                local player = Players:GetPlayerByUserId(item.userId)\n                if player then\n                    table.insert(localPlayers, player)\n                end\n            end\n            pcall(function()\n                queue:RemoveAsync(readId)\n            end)\n\n            if #localPlayers > 0 then\n                local code = TeleportService:ReserveServer(MATCH_PLACE_ID)\n                local options = Instance.new('TeleportOptions')\n                options.ReservedServerAccessCode = code\n                options:SetTeleportData({Match = userIds})\n                pcall(function()\n                    TeleportService:TeleportAsync(MATCH_PLACE_ID, localPlayers, options)\n                end)\n            end\n        else\n            task.wait(2)\n        end\n    end\nend\n\ntask.spawn(matchLoop)\nreturn {Join = joinQueue}\n-- Players waiting in other servers are matched by whichever server reads the queue; use MessagingService to teleport them.",
+  "id": "rb-0132"
+ },
+ {
+  "instruction": "Create a batched HttpService logger in Luau that queues events, flushes JSON in batches, rate-limits requests and retries with backoff.",
+  "input": "",
+  "output": "local HttpService = game:GetService('HttpService')\n\nlocal ENDPOINT = 'https://example.com/ingest'   -- your own backend / webhook relay\nlocal FLUSH_INTERVAL = 10\nlocal MAX_BATCH = 25\nlocal MAX_QUEUE = 500\n\nlocal queue = {}\nlocal flushing = false\n\nlocal Logger = {}\n\nfunction Logger.Log(eventName, fields)\n    if #queue >= MAX_QUEUE then\n        table.remove(queue, 1)  -- drop the oldest instead of growing without bound\n    end\n    table.insert(queue, {\n        event = eventName,\n        fields = fields or {},\n        time = os.time(),\n        server = game.JobId,\n    })\nend\n\nlocal function send(batch)\n    local body = HttpService:JSONEncode({events = batch})\n    for attempt = 1, 4 do\n        local ok, response = pcall(function()\n            return HttpService:RequestAsync({\n                Url = ENDPOINT,\n                Method = 'POST',\n                Headers = {['Content-Type'] = 'application/json'},\n                Body = body,\n            })\n        end)\n        if ok and response.Success then\n            return true\n        end\n        if ok and response.StatusCode == 429 then\n            task.wait(5 * attempt)  -- respect rate limits\n        else\n            task.wait(2 ^ attempt)\n        end\n    end\n    return false\nend\n\nlocal function flush()\n    if flushing or #queue == 0 then return end\n    flushing = true\n    local batch = table.move(queue, 1, math.min(#queue, MAX_BATCH), 1, {})\n    if send(batch) then\n        for _ = 1, #batch do\n            table.remove(queue, 1)\n        end\n    end\n    flushing = false\nend\n\ntask.spawn(function()\n    while true do\n        task.wait(FLUSH_INTERVAL)\n        flush()\n    end\nend)\n\ngame:BindToClose(function()\n    flush()\nend)\n\nreturn Logger\n-- HttpService must be enabled in Game Settings. Never send secrets from the client.",
+  "id": "rb-0133"
+ },
+ {
+  "instruction": "What are the key DataStore limits and best practices?",
+  "input": "",
+  "output": "A key can hold up to about 4 MB of data, and request budgets are limited and scale with player count, so avoid per-frame or per-action saves. Use UpdateAsync for read-modify-write instead of GetAsync followed by SetAsync, wrap every call in pcall with retries and backoff, save on PlayerRemoving, in BindToClose and with an autosave interval, and use session locking so two servers do not overwrite the same player.",
+  "id": "rb-0440"
+ },
+ {
+  "instruction": "When should I use MemoryStoreService instead of DataStores?",
+  "input": "",
+  "output": "MemoryStore is fast, shared in-memory storage across servers with automatic expiration, offering queues, sorted maps and hash maps. Use it for matchmaking queues, ephemeral leaderboards, session coordination and rate limiting across servers. It is not durable, so anything that must survive should be written to a DataStore.",
+  "id": "rb-0442"
+ },
+ {
+  "instruction": "How do reserved servers and TeleportOptions work for parties?",
+  "input": "",
+  "output": "TeleportService:ReserveServer returns an access code for a private server. Create a TeleportOptions, set ReservedServerAccessCode and optionally SetTeleportData, then call TeleportAsync with a list of players. Always wrap in pcall, retry on failure and handle TeleportInitFailed. Teleport data is client-visible metadata, so treat it as untrusted and validate it on arrival.",
+  "id": "rb-0443"
+ },
+ {
+  "instruction": "Why must ProcessReceipt be idempotent, and what are its rules?",
+  "input": "",
+  "output": "Roblox can call ProcessReceipt multiple times for the same purchase until you return PurchaseGranted, including after server crashes. Record the PurchaseId durably and check it so you never grant twice, return PurchaseGranted only after the grant and record are saved, return NotProcessedYet on any failure, and remember only one ProcessReceipt callback can be set per server.",
+  "id": "rb-0475"
+ },
+ {
+  "instruction": "How can I implement feature flags and live-ops configuration in Roblox?",
+  "input": "",
+  "output": "Store configuration in a DataStore or MemoryStore (or fetch it through an external service with HttpService), cache it per server and refresh on an interval, and expose values through a config module. Use flags for kill switches and gradual rollouts, for example enabling a feature when a hash of the UserId falls under a percentage. Log changes and always provide safe defaults when the fetch fails.",
+  "id": "rb-0481"
+ },
+ {
+  "instruction": "This coin saving code can lose coins when two servers save at once. Fix it.",
+  "input": "local coins = store:GetAsync(key) or 0\nstore:SetAsync(key, coins + 100)",
+  "output": "Problem: read-then-write is not atomic. Two servers can read the same value and one write overwrites the other. Also the calls are not wrapped in pcall, so a DataStore error will break the script.\n\nFixed version:\n\nlocal ok, err = pcall(function()\n    store:UpdateAsync(key, function(old)\n        return (old or 0) + 100\n    end)\nend)\nif not ok then\n    warn('Failed to add coins: ' .. tostring(err))\n    -- retry with backoff or queue the change\nend",
+  "id": "rb-0484"
+ }
+]

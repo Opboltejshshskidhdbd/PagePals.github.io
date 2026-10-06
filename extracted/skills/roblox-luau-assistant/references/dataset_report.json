@@ -1,0 +1,3900 @@
+{
+ "analyzer": "TOOL_MISSING",
+ "entries": [
+  {
+   "id": "rb-0000",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0001",
+   "kind": "code",
+   "domain": "camera",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0002",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0003",
+   "kind": "code",
+   "domain": "ui",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0004",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0005",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0006",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0007",
+   "kind": "code",
+   "domain": "ui",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0008",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0009",
+   "kind": "code",
+   "domain": "camera",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0010",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0011",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0012",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0013",
+   "kind": "code",
+   "domain": "camera",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0014",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0015",
+   "kind": "code",
+   "domain": "networking",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0016",
+   "kind": "code",
+   "domain": "ui",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0017",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0018",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0019",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0020",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0021",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0022",
+   "kind": "code",
+   "domain": "ui",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0023",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0024",
+   "kind": "code",
+   "domain": "ui",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0025",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0026",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0027",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0028",
+   "kind": "code",
+   "domain": "misc",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0029",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0030",
+   "kind": "code",
+   "domain": "camera",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0031",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0032",
+   "kind": "code",
+   "domain": "ui",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0033",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0034",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0035",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0036",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0037",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0038",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0039",
+   "kind": "debug_fix",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0040",
+   "kind": "debug_fix",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0041",
+   "kind": "debug_fix",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0042",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0043",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0044",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0045",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0046",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0047",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0048",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0049",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0050",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0051",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0052",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0053",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0054",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0055",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0056",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0057",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0058",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0059",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0060",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0061",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0062",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0063",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0064",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0065",
+   "kind": "code",
+   "domain": "camera",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0066",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0067",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0068",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0069",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0070",
+   "kind": "code",
+   "domain": "networking",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0071",
+   "kind": "code",
+   "domain": "networking",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0072",
+   "kind": "code",
+   "domain": "networking",
+   "status": "LINT_WARN",
+   "findings": [
+    {
+     "rule": "lifecycle.unstored_connection",
+     "severity": "WARN",
+     "line": 7,
+     "message": "frame connection without stored handle/cleanup path",
+     "text": "RunService.Heartbeat:Connect("
+    }
+   ],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0073",
+   "kind": "code",
+   "domain": "networking",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0074",
+   "kind": "code",
+   "domain": "networking",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0075",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0076",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0077",
+   "kind": "code",
+   "domain": "ui",
+   "status": "LINT_WARN",
+   "findings": [
+    {
+     "rule": "lifecycle.unstored_connection",
+     "severity": "WARN",
+     "line": 18,
+     "message": "frame connection without stored handle/cleanup path",
+     "text": "RunService.Heartbeat:Connect("
+    }
+   ],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0078",
+   "kind": "code",
+   "domain": "networking",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0079",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0080",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0081",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0082",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_WARN",
+   "findings": [
+    {
+     "rule": "lifecycle.unstored_connection",
+     "severity": "WARN",
+     "line": 21,
+     "message": "frame connection without stored handle/cleanup path",
+     "text": "RunService.PreSimulation:Connect("
+    },
+    {
+     "rule": "lifecycle.unstored_connection",
+     "severity": "WARN",
+     "line": 36,
+     "message": "frame connection without stored handle/cleanup path",
+     "text": "RunService.PreRender:Connect("
+    }
+   ],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0083",
+   "kind": "code",
+   "domain": "ui",
+   "status": "LINT_WARN",
+   "findings": [
+    {
+     "rule": "lifecycle.unstored_connection",
+     "severity": "WARN",
+     "line": 16,
+     "message": "frame connection without stored handle/cleanup path",
+     "text": "RunService.Heartbeat:Connect("
+    }
+   ],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0084",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0085",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0086",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0087",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0088",
+   "kind": "code",
+   "domain": "camera",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0089",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0090",
+   "kind": "code",
+   "domain": "physics",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0091",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0092",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0093",
+   "kind": "code",
+   "domain": "camera",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0094",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0095",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0096",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0097",
+   "kind": "code",
+   "domain": "physics",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0098",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0099",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0100",
+   "kind": "code",
+   "domain": "camera",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0101",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0102",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0103",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0104",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0105",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0106",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0107",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0108",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0109",
+   "kind": "debug_fix",
+   "domain": "networking",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0110",
+   "kind": "debug_fix",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0111",
+   "kind": "debug_fix",
+   "domain": "ui",
+   "status": "LINT_WARN",
+   "findings": [
+    {
+     "rule": "lifecycle.unstored_connection",
+     "severity": "WARN",
+     "line": 19,
+     "message": "frame connection without stored handle/cleanup path",
+     "text": "RunService.Heartbeat:Connect("
+    }
+   ],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0112",
+   "kind": "code",
+   "domain": "ai",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0113",
+   "kind": "code",
+   "domain": "ai",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0114",
+   "kind": "code",
+   "domain": "ai",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0115",
+   "kind": "code",
+   "domain": "ai",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0116",
+   "kind": "code",
+   "domain": "ai",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0117",
+   "kind": "code",
+   "domain": "ai",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0118",
+   "kind": "code",
+   "domain": "ai",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0119",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0120",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0121",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0122",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0123",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0124",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0125",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0126",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0127",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0128",
+   "kind": "code",
+   "domain": "datastore",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0129",
+   "kind": "code",
+   "domain": "datastore",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0130",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0131",
+   "kind": "code",
+   "domain": "networking",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0132",
+   "kind": "code",
+   "domain": "datastore",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0133",
+   "kind": "code",
+   "domain": "datastore",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0134",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0135",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0136",
+   "kind": "code",
+   "domain": "ui",
+   "status": "LINT_WARN",
+   "findings": [
+    {
+     "rule": "lifecycle.unstored_connection",
+     "severity": "WARN",
+     "line": 36,
+     "message": "frame connection without stored handle/cleanup path",
+     "text": "RunService.Heartbeat:Connect("
+    }
+   ],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0137",
+   "kind": "code",
+   "domain": "camera",
+   "status": "LINT_WARN",
+   "findings": [
+    {
+     "rule": "lifecycle.unstored_connection",
+     "severity": "WARN",
+     "line": 35,
+     "message": "frame connection without stored handle/cleanup path",
+     "text": "RunService.RenderStepped:Connect("
+    }
+   ],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0138",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0139",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0140",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0141",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0142",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0143",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_WARN",
+   "findings": [
+    {
+     "rule": "lifecycle.unstored_connection",
+     "severity": "WARN",
+     "line": 44,
+     "message": "frame connection without stored handle/cleanup path",
+     "text": "RunService.Heartbeat:Connect("
+    }
+   ],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0144",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_WARN",
+   "findings": [
+    {
+     "rule": "lifecycle.unstored_connection",
+     "severity": "WARN",
+     "line": 30,
+     "message": "frame connection without stored handle/cleanup path",
+     "text": "RunService.Heartbeat:Connect("
+    }
+   ],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0145",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0146",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0147",
+   "kind": "code",
+   "domain": "camera",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0148",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_WARN",
+   "findings": [
+    {
+     "rule": "lifecycle.unstored_connection",
+     "severity": "WARN",
+     "line": 30,
+     "message": "frame connection without stored handle/cleanup path",
+     "text": "RunService.Heartbeat:Connect("
+    }
+   ],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0149",
+   "kind": "code",
+   "domain": "ui",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0150",
+   "kind": "code",
+   "domain": "networking",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0151",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0152",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0153",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0154",
+   "kind": "code",
+   "domain": "ui",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0155",
+   "kind": "code",
+   "domain": "ui",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0156",
+   "kind": "code",
+   "domain": "ui",
+   "status": "LINT_WARN",
+   "findings": [
+    {
+     "rule": "lifecycle.unstored_connection",
+     "severity": "WARN",
+     "line": 36,
+     "message": "frame connection without stored handle/cleanup path",
+     "text": "RunService.RenderStepped:Connect("
+    }
+   ],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0157",
+   "kind": "code",
+   "domain": "ui",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0158",
+   "kind": "code",
+   "domain": "ui",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0159",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0160",
+   "kind": "code",
+   "domain": "ui",
+   "status": "LINT_WARN",
+   "findings": [
+    {
+     "rule": "lifecycle.unstored_connection",
+     "severity": "WARN",
+     "line": 29,
+     "message": "frame connection without stored handle/cleanup path",
+     "text": "RunService.RenderStepped:Connect("
+    }
+   ],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0161",
+   "kind": "code",
+   "domain": "ui",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0162",
+   "kind": "code",
+   "domain": "ui",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0163",
+   "kind": "code",
+   "domain": "physics",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0164",
+   "kind": "code",
+   "domain": "physics",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0165",
+   "kind": "code",
+   "domain": "ai",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0166",
+   "kind": "code",
+   "domain": "camera",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0167",
+   "kind": "code",
+   "domain": "ai",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0168",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0169",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0170",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0171",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0172",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0173",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0174",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0175",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0176",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0177",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0178",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0179",
+   "kind": "code",
+   "domain": "ui",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0180",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0181",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0182",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0183",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0184",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0185",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0186",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0187",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0188",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0189",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0190",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0191",
+   "kind": "code",
+   "domain": "camera",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0192",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0193",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0194",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0195",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0196",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0197",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0198",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0199",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0200",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0201",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0202",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0203",
+   "kind": "code",
+   "domain": "ui",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0204",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0205",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0206",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0207",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0208",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0209",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0210",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0211",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0212",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0213",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0214",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0215",
+   "kind": "code",
+   "domain": "camera",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0216",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0217",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0218",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0219",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0220",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0221",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0222",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0223",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0224",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0225",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0226",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0227",
+   "kind": "code",
+   "domain": "ui",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0228",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0229",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0230",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0231",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0232",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0233",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0234",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0235",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0236",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0237",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0238",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0239",
+   "kind": "code",
+   "domain": "camera",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0240",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0241",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0242",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0243",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0244",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0245",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0246",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0247",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0248",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0249",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0250",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0251",
+   "kind": "code",
+   "domain": "ui",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0252",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0253",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0254",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0255",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0256",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0257",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0258",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0259",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0260",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0261",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0262",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0263",
+   "kind": "code",
+   "domain": "camera",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0264",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0265",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0266",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0267",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0268",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0269",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0270",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0271",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0272",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0273",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0274",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0275",
+   "kind": "code",
+   "domain": "ui",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0276",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0277",
+   "kind": "code",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0278",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0279",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0280",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0281",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0282",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0283",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0284",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0285",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0286",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0287",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0288",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0289",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0290",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0291",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0292",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0293",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0294",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0295",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0296",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0297",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0298",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0299",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0300",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0301",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0302",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0303",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0304",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0305",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0306",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0307",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0308",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0309",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0310",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0311",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0312",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0313",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0314",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0315",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0316",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0317",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0318",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0319",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0320",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0321",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0322",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0323",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0324",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0325",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0326",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0327",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0328",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0329",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0330",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0331",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0332",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0333",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0334",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0335",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0336",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0337",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0338",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0339",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0340",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0341",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0342",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0343",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0344",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0345",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0346",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0347",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0348",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0349",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0350",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0351",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0352",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0353",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0354",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0355",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0356",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0357",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0358",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0359",
+   "kind": "code",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0360",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0361",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0362",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0363",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0364",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0365",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0366",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0367",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0368",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0369",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0370",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0371",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0372",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0373",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0374",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0375",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0376",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0377",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0378",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0379",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0380",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0381",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0382",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0383",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0384",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0385",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0386",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0387",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0388",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0389",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0390",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0391",
+   "kind": "code",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0392",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0393",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0394",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0395",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0396",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0397",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0398",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0399",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0400",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0401",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0402",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0403",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0404",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0405",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0406",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0407",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0408",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0409",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0410",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0411",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0412",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0413",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0414",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0415",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0416",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0417",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0418",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0419",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0420",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0421",
+   "kind": "code",
+   "domain": "easing",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0422",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0423",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0424",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0425",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0426",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0427",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0428",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0429",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0430",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0431",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0432",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0433",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0434",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0435",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0436",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0437",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0438",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0439",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0440",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0441",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0442",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0443",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0444",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0445",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0446",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0447",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0448",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0449",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0450",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0451",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0452",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0453",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0454",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0455",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0456",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0457",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0458",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0459",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0460",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0461",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0462",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0463",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0464",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0465",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0466",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0467",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0468",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0469",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0470",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0471",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0472",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0473",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0474",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0475",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0476",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0477",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0478",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0479",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0480",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0481",
+   "status": "SKIPPED_QA"
+  },
+  {
+   "id": "rb-0482",
+   "kind": "debug_fix",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0483",
+   "kind": "debug_fix",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0484",
+   "kind": "debug_fix",
+   "domain": "datastore",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0485",
+   "kind": "debug_fix",
+   "domain": "misc",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0486",
+   "kind": "debug_fix",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0487",
+   "kind": "debug_fix",
+   "domain": "misc",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0488",
+   "kind": "debug_fix",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0489",
+   "kind": "debug_fix",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0490",
+   "kind": "debug_fix",
+   "domain": "ui",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0491",
+   "kind": "debug_fix",
+   "domain": "misc",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0492",
+   "kind": "debug_fix",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0493",
+   "kind": "debug_fix",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0494",
+   "kind": "debug_fix",
+   "domain": "misc",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0495",
+   "kind": "debug_fix",
+   "domain": "misc",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0496",
+   "kind": "debug_fix",
+   "domain": "ui",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0497",
+   "kind": "debug_fix",
+   "domain": "ui",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0498",
+   "kind": "debug_fix",
+   "domain": "ui",
+   "status": "LINT_WARN",
+   "findings": [
+    {
+     "rule": "lifecycle.unstored_connection",
+     "severity": "WARN",
+     "line": 4,
+     "message": "frame connection without stored handle/cleanup path",
+     "text": "RunService.Heartbeat:Connect("
+    }
+   ],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0499",
+   "kind": "debug_fix",
+   "domain": "networking",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0500",
+   "kind": "debug_fix",
+   "domain": "ui",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0501",
+   "kind": "debug_fix",
+   "domain": "vfx",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0502",
+   "kind": "debug_fix",
+   "domain": "architecture",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0503",
+   "kind": "debug_fix",
+   "domain": "networking",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0504",
+   "kind": "debug_fix",
+   "domain": "ui",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0505",
+   "kind": "debug_fix",
+   "domain": "combat",
+   "status": "LINT_PASS",
+   "findings": [],
+   "analyzer": "TOOL_MISSING"
+  },
+  {
+   "id": "rb-0506",
+   "kind": "debug_fix",
+   "domain": "ui",
+   "status": "LINT_WARN",
+   "findings": [
+    {
+     "rule": "lifecycle.unstored_connection",
+     "severity": "WARN",
+     "line": 12,
+     "message": "frame connection without stored handle/cleanup path",
+     "text": "RunService.Heartbeat:Connect("
+    }
+   ],
+   "analyzer": "TOOL_MISSING"
+  }
+ ],
+ "summary": {
+  "lint_pass": 421,
+  "lint_fail": 0,
+  "lint_warn_only": 14,
+  "skipped_qa": 72,
+  "analyzer_pass": 0,
+  "analyzer_fail": 0
+ }
+}
