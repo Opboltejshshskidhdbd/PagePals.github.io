@@ -1,0 +1,17 @@
+{"version":1,"rules":[
+{"id":"deprecated-wait","regex":"(?<![.\\w:])wait\\s*\\(","severity":"warning","message":"wait() deprecated hai; task.wait() use karo"},
+{"id":"deprecated-spawn","regex":"(?<![.\\w:])spawn\\s*\\(","severity":"warning","message":"spawn() deprecated hai; task.spawn() use karo"},
+{"id":"deprecated-delay","regex":"(?<![.\\w:])delay\\s*\\(","severity":"warning","message":"delay() deprecated hai; task.delay() use karo"},
+{"id":"lowercase-connect","regex":":connect\\s*\\(","severity":"warning","message":":connect deprecated; :Connect use karo"},
+{"id":"lowercase-disconnect","regex":":disconnect\\s*\\(","severity":"warning","message":":disconnect deprecated; :Disconnect use karo"},
+{"id":"lowercase-wait","regex":":wait\\s*\\(","severity":"warning","message":":wait() deprecated; :Wait() use karo"},
+{"id":"deprecated-remove","regex":":Remove\\s*\\(","severity":"warning","message":":Remove() deprecated; :Destroy() use karo"},
+{"id":"instance-new-parent","regex":"Instance\\.new\\s*\\([^)]*,","severity":"warning","message":"Instance.new ka 2nd (parent) argument avoid karo; properties set karke last me .Parent set karo"},
+{"id":"game-workspace","regex":"\\bgame\\.Workspace\\b","severity":"info","message":"workspace global ya game:GetService('Workspace') use karo"},
+{"id":"fenv","regex":"\\b(getfenv|setfenv)\\b","severity":"warning","message":"getfenv/setfenv Luau me discouraged hain, optimizations todte hain"},
+{"id":"loadstring","regex":"\\bloadstring\\b","severity":"warning","message":"loadstring default me disabled hota hai (ServerScriptService.LoadStringEnabled)"},
+{"id":"table-getn","regex":"\\btable\\.getn\\b","severity":"error","message":"table.getn Luau me nahi hai; #t use karo"},
+{"id":"global-unpack","regex":"(?<![.\\w])unpack\\s*\\(","severity":"warning","message":"unpack() ki jagah table.unpack() use karo"},
+{"id":"tick","regex":"\\btick\\s*\\(","severity":"info","message":"tick() deprecated; os.time(), os.clock() ya workspace:GetServerTimeNow() use karo"},
+{"id":"while-true","regex":"while\\s+true\\s+do\\b","severity":"info","message":"while true do loop me task.wait() zaroor ho, warna script exhaust ho jayegi"}
+]}
