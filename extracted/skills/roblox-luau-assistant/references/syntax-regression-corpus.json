@@ -1,0 +1,239 @@
+{
+ "version": "2.0.0",
+ "note": "Every wrong snippet must be rejected (unless expect_wrong is accept) and every right snippet accepted by scripts/luau_syntax.py. Regression corpus for syntax failure classes, verified by tests/test_syntax_corpus.py.",
+ "cases": [
+  {
+   "id": "BLOCK_EXTRA_END",
+   "class": "extra_end",
+   "wrong": "local x = 1\nend",
+   "right": "local x = 1",
+   "lesson": "Do not infer an unmatched end from a nearby block; audit whole-source block structure.",
+   "expect_wrong": "reject"
+  },
+  {
+   "id": "BLOCK_MISSING_END",
+   "class": "missing_end",
+   "wrong": "if true then\n  print(1)",
+   "right": "if true then\n  print(1)\nend",
+   "lesson": "A missing terminator is a structural defect and must be revalidated after repair.",
+   "expect_wrong": "reject"
+  },
+  {
+   "id": "NESTED_CALLBACK",
+   "class": "composition_mismatch",
+   "wrong": "local function f()\n  task.spawn(function()\n    print(1)\nend",
+   "right": "local function f()\n  task.spawn(function()\n    print(1)\n  end)\nend",
+   "lesson": "Nested callback composition requires whole-source balancing after generation.",
+   "expect_wrong": "reject"
+  },
+  {
+   "id": "COMMENT_CORRUPTION",
+   "class": "semantic_not_syntax",
+   "wrong": "-- local x = 1\nprint(2)",
+   "right": "local x = 1\nprint(2)",
+   "lesson": "Generated formatting must not accidentally comment out executable source. (Syntactically valid: a syntax parser cannot detect this; it needs source review.)",
+   "expect_wrong": "accept"
+  },
+  {
+   "id": "NOT_EQUAL_BANG",
+   "class": "operator",
+   "wrong": "if a != b then end",
+   "right": "if a ~= b then end",
+   "lesson": "Luau not-equal is ~=.",
+   "expect_wrong": "reject",
+   "expect_fragment": "unexpected symbol '!'"
+  },
+  {
+   "id": "LOGICAL_SYMBOLS",
+   "class": "operator",
+   "wrong": "if a && b then end",
+   "right": "if a and b then end",
+   "lesson": "Use and / or / not, never && || !.",
+   "expect_wrong": "reject"
+  },
+  {
+   "id": "INCREMENT",
+   "class": "operator",
+   "wrong": "local i = 0\ni++",
+   "right": "local i = 0\ni += 1",
+   "lesson": "There is no ++; -- starts a comment.",
+   "expect_wrong": "reject"
+  },
+  {
+   "id": "ELSE_IF",
+   "class": "block",
+   "wrong": "local function f(a, b)\n  if a then\n    x()\n  else if b then\n    y()\n  end\nend",
+   "right": "local function f(a, b)\n  if a then\n    x()\n  elseif b then\n    y()\n  end\nend",
+   "lesson": "'else if' needs its own end; use elseif.",
+   "expect_wrong": "reject",
+   "expect_fragment": "expected 'end'"
+  },
+  {
+   "id": "MISSING_THEN",
+   "class": "keyword",
+   "wrong": "if a == 1\n  x()\nend",
+   "right": "if a == 1 then\n  x()\nend",
+   "lesson": "if/elseif conditions need 'then'.",
+   "expect_wrong": "reject",
+   "expect_fragment": "expected 'then'"
+  },
+  {
+   "id": "MISSING_DO",
+   "class": "keyword",
+   "wrong": "for i = 1, 3\n  x()\nend",
+   "right": "for i = 1, 3 do\n  x()\nend",
+   "lesson": "for/while headers need 'do'.",
+   "expect_wrong": "reject",
+   "expect_fragment": "expected 'do'"
+  },
+  {
+   "id": "CODE_AFTER_RETURN",
+   "class": "return",
+   "wrong": "local function f()\n  return 1\n  print(\"x\")\nend",
+   "right": "local function f()\n  print(\"x\")\n  return 1\nend",
+   "lesson": "'return' must be the last statement of its block.",
+   "expect_wrong": "reject",
+   "expect_fragment": "'return' must be the last"
+  },
+  {
+   "id": "CODE_AFTER_MODULE_RETURN",
+   "class": "return",
+   "wrong": "return M\nlocal x = 2",
+   "right": "local x = 2\nreturn M",
+   "lesson": "Put helper code before the module return.",
+   "expect_wrong": "reject",
+   "expect_fragment": "'return' must be the last"
+  },
+  {
+   "id": "TABLE_MISSING_COMMA",
+   "class": "table",
+   "wrong": "local t = {\n  a = 1\n  b = 2\n}",
+   "right": "local t = {\n  a = 1,\n  b = 2,\n}",
+   "lesson": "Table entries need commas.",
+   "expect_wrong": "reject",
+   "expect_fragment": "expected ',' or"
+  },
+  {
+   "id": "UNFINISHED_STRING",
+   "class": "string",
+   "wrong": "local s = 'abc\nprint(s)",
+   "right": "local s = 'abc'\nprint(s)",
+   "lesson": "Close string quotes.",
+   "expect_wrong": "reject",
+   "expect_fragment": "unfinished string"
+  },
+  {
+   "id": "JS_DECLARATION",
+   "class": "keyword",
+   "wrong": "let x = 1",
+   "right": "local x = 1",
+   "lesson": "Declare with local.",
+   "expect_wrong": "reject",
+   "expect_fragment": "not a Luau keyword"
+  },
+  {
+   "id": "BRACE_BLOCK",
+   "class": "block",
+   "wrong": "if a then { x() }",
+   "right": "if a then x() end",
+   "lesson": "Blocks use then/end, not braces.",
+   "expect_wrong": "reject"
+  },
+  {
+   "id": "TERNARY",
+   "class": "expression",
+   "wrong": "local v = a ? 1 : 2",
+   "right": "local v = if a then 1 else 2",
+   "lesson": "Luau ternary is an if-expression.",
+   "expect_wrong": "reject"
+  },
+  {
+   "id": "ASSIGN_TO_CALL",
+   "class": "assignment",
+   "wrong": "f() = 1",
+   "right": "f(1)",
+   "lesson": "Calls are not assignable.",
+   "expect_wrong": "reject"
+  },
+  {
+   "id": "BREAK_OUTSIDE_LOOP",
+   "class": "compile",
+   "wrong": "local function f()\n  break\nend",
+   "right": "local function f()\n  while true do\n    break\n  end\nend",
+   "lesson": "break/continue only inside loops.",
+   "expect_wrong": "reject",
+   "expect_fragment": "outside of a loop"
+  },
+  {
+   "id": "VARARG_OUTSIDE",
+   "class": "compile",
+   "wrong": "local function f()\n  return ...\nend",
+   "right": "local function f(...)\n  return ...\nend",
+   "lesson": "... needs a vararg function.",
+   "expect_wrong": "reject",
+   "expect_fragment": "vararg"
+  },
+  {
+   "id": "NULL_KEYWORD",
+   "class": "keyword",
+   "wrong": "local x = null\nx",
+   "right": "local x = nil",
+   "lesson": "Luau uses nil.",
+   "expect_wrong": "reject"
+  },
+  {
+   "id": "MISSING_PAREN",
+   "class": "bracket",
+   "wrong": "print('a'",
+   "right": "print('a')",
+   "lesson": "Close call parentheses.",
+   "expect_wrong": "reject"
+  },
+  {
+   "id": "IFEXPR_NO_ELSE",
+   "class": "expression",
+   "wrong": "local v = if a then 1",
+   "right": "local v = if a then 1 else 2",
+   "lesson": "An if-expression needs else.",
+   "expect_wrong": "reject",
+   "expect_fragment": "needs an 'else'"
+  },
+  {
+   "id": "BARE_EXPRESSION",
+   "class": "statement",
+   "wrong": "local x = 1\nx + 1",
+   "right": "local x = 1\nprint(x + 1)",
+   "lesson": "An expression alone is not a statement.",
+   "expect_wrong": "reject",
+   "expect_fragment": "not a statement"
+  },
+  {
+   "id": "C_COMMENT",
+   "class": "comment",
+   "wrong": "// comment\nlocal x = 1",
+   "right": "-- comment\nlocal x = 1",
+   "lesson": "Comments start with --.",
+   "expect_wrong": "reject"
+  },
+  {
+   "id": "CALLBACK_MISSING_PAREN",
+   "class": "bracket",
+   "wrong": "button.Activated:Connect(function()\n  print(1)\nend",
+   "right": "button.Activated:Connect(function()\n  print(1)\nend)",
+   "lesson": "A callback needs its closing parenthesis after end.",
+   "expect_wrong": "reject"
+  }
+ ],
+ "valid_only": {
+  "if_expression": "local v = if a then 1 elseif b then 2 else 3",
+  "compound_assign": "local n = 0\nn += 1\nn ..= \"x\"",
+  "typed_function": "local function f<T>(a: T, ...: number): (T, string)\n  return a, \"x\"\nend",
+  "type_alias": "type P = {x: number, y: number?}\nexport type Cb<T...> = (T...) -> ()",
+  "interpolated_string": "local s = `hello {name} {#items + 1}`",
+  "continue_in_loop": "for i = 1, 3 do\n  if i == 2 then continue end\n  print(i)\nend",
+  "long_strings_comments": "local a = [[x\ny]]\n--[[ c ]]\n--[=[ d ]=]",
+  "method_string_call": "obj:Method 'x'\nprint 'hi'",
+  "identifier_fn": "local function connect(fn)\n  fn(1)\nend",
+  "do_return_midblock": "local function f()\n  do return end\n  print(1)\nend"
+ }
+}

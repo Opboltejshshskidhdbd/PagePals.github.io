@@ -1,0 +1,230 @@
+[
+ {
+  "instruction": "Implement a round-based game loop in Luau (Intermission, Playing, Ended) with minimum players, replicated timer attributes and a Signal for phase changes.",
+  "input": "",
+  "output": "local Players = game:GetService('Players')\nlocal ReplicatedStorage = game:GetService('ReplicatedStorage')\n\nlocal MIN_PLAYERS = 2\nlocal INTERMISSION = 20\nlocal ROUND_TIME = 120\nlocal ENDED_TIME = 8\n\nlocal state = ReplicatedStorage  -- attributes on ReplicatedStorage replicate to all clients\nstate:SetAttribute('Phase', 'Waiting')\nstate:SetAttribute('TimeLeft', 0)\n\nlocal phaseChanged = Instance.new('BindableEvent')\n\nlocal function setPhase(phase, duration)\n    state:SetAttribute('Phase', phase)\n    state:SetAttribute('TimeLeft', duration or 0)\n    phaseChanged:Fire(phase)\nend\n\nlocal function countdown(duration, shouldAbort)\n    for remaining = duration, 1, -1 do\n        state:SetAttribute('TimeLeft', remaining)\n        task.wait(1)\n        if shouldAbort and shouldAbort() then\n            return false\n        end\n    end\n    state:SetAttribute('TimeLeft', 0)\n    return true\nend\n\nlocal function alivePlayers()\n    local alive = 0\n    for _, player in Players:GetPlayers() do\n        local humanoid = player.Character and player.Character:FindFirstChildOfClass('Humanoid')\n        if humanoid and humanoid.Health > 0 then\n            alive += 1\n        end\n    end\n    return alive\nend\n\ntask.spawn(function()\n    while true do\n        -- WAITING until enough players\n        setPhase('Waiting')\n        while #Players:GetPlayers() < MIN_PLAYERS do\n            task.wait(1)\n        end\n\n        -- INTERMISSION (abort if players drop below minimum)\n        setPhase('Intermission', INTERMISSION)\n        local ok = countdown(INTERMISSION, function()\n            return #Players:GetPlayers() < MIN_PLAYERS\n        end)\n\n        if ok then\n            -- PLAYING (ends on timer or last player standing)\n            setPhase('Playing', ROUND_TIME)\n            countdown(ROUND_TIME, function()\n                return alivePlayers() <= 1\n            end)\n\n            -- ENDED\n            setPhase('Ended', ENDED_TIME)\n            countdown(ENDED_TIME)\n        end\n    end\nend)\n\nreturn phaseChanged.Event",
+  "id": "rb-0139"
+ },
+ {
+  "instruction": "Write a server-authoritative sprint system in Luau with stamina drain, regeneration delay, exhaustion lockout and WalkSpeed control.",
+  "input": "",
+  "output": "local Players = game:GetService('Players')\nlocal ReplicatedStorage = game:GetService('ReplicatedStorage')\nlocal RunService = game:GetService('RunService')\n\nlocal SprintRemote = ReplicatedStorage:WaitForChild('SprintRemote')\n\nlocal WALK_SPEED, SPRINT_SPEED = 16, 26\nlocal MAX_STAMINA = 100\nlocal DRAIN_PER_SECOND = 22\nlocal REGEN_PER_SECOND = 18\nlocal REGEN_DELAY = 1.2\nlocal EXHAUSTED_UNTIL = 30  -- must regain this much before sprinting again after hitting 0\n\nlocal state = {}  -- [Player] = {sprinting, stamina, lastUse, exhausted}\n\nlocal function getState(player)\n    local s = state[player]\n    if not s then\n        s = {sprinting = false, stamina = MAX_STAMINA, lastUse = 0, exhausted = false}\n        state[player] = s\n    end\n    return s\nend\n\nSprintRemote.OnServerEvent:Connect(function(player, wantsSprint)\n    if type(wantsSprint) ~= 'boolean' then return end\n    local s = getState(player)\n    s.sprinting = wantsSprint and not s.exhausted\nend)\n\nRunService.Heartbeat:Connect(function(dt)\n    for player, s in state do\n        local character = player.Character\n        local humanoid = character and character:FindFirstChildOfClass('Humanoid')\n        if humanoid then\n            local moving = humanoid.MoveDirection.Magnitude > 0.1\n            if s.sprinting and moving and s.stamina > 0 then\n                s.stamina = math.max(0, s.stamina - DRAIN_PER_SECOND * dt)\n                s.lastUse = os.clock()\n                humanoid.WalkSpeed = SPRINT_SPEED\n                if s.stamina == 0 then\n                    s.exhausted = true\n                    s.sprinting = false\n                end\n            else\n                humanoid.WalkSpeed = WALK_SPEED\n                if os.clock() - s.lastUse > REGEN_DELAY then\n                    s.stamina = math.min(MAX_STAMINA, s.stamina + REGEN_PER_SECOND * dt)\n                    if s.exhausted and s.stamina >= EXHAUSTED_UNTIL then\n                        s.exhausted = false\n                    end\n                end\n            end\n            character:SetAttribute('Stamina', s.stamina)  -- clients read this for the UI\n        end\n    end\nend)\n\nPlayers.PlayerRemoving:Connect(function(player)\n    state[player] = nil\nend)",
+  "id": "rb-0144"
+ },
+ {
+  "instruction": "Write a double jump in Luau for the local player that uses JumpRequest, resets on landing and applies a clean upward velocity.",
+  "input": "",
+  "output": "local Players = game:GetService('Players')\nlocal UserInputService = game:GetService('UserInputService')\n\nlocal player = Players.LocalPlayer\nlocal MAX_AIR_JUMPS = 1\nlocal JUMP_VELOCITY = 50\n\nlocal TweenService = game:GetService('TweenService')\nlocal Debris = game:GetService('Debris')\n\nlocal function ringEffect(position)\n    local ring = Instance.new('Part')\n    ring.Shape = Enum.PartType.Cylinder\n    ring.Anchored = true\n    ring.CanCollide = false\n    ring.CanQuery = false\n    ring.CanTouch = false\n    ring.Material = Enum.Material.Neon\n    ring.Color = Color3.fromRGB(180, 220, 255)\n    ring.Size = Vector3.new(0.2, 1, 1)\n    ring.CFrame = CFrame.new(position) * CFrame.Angles(0, 0, math.rad(90))\n    ring.Parent = workspace\n    TweenService:Create(ring, TweenInfo.new(0.35, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {\n        Size = Vector3.new(0.2, 7, 7),\n        Transparency = 1,\n    }):Play()\n    Debris:AddItem(ring, 0.4)\nend\n\nlocal function setup(character)\n    local humanoid = character:WaitForChild('Humanoid')\n    local root = character:WaitForChild('HumanoidRootPart')\n    local airJumps = 0\n    local canDouble = false\n\n    humanoid.StateChanged:Connect(function(_, new)\n        if new == Enum.HumanoidStateType.Landed or new == Enum.HumanoidStateType.Running then\n            airJumps = 0\n            canDouble = false\n        elseif new == Enum.HumanoidStateType.Freefall or new == Enum.HumanoidStateType.Jumping then\n            -- small delay so the first jump press is not counted as the second\n            task.delay(0.15, function()\n                if humanoid:GetState() == Enum.HumanoidStateType.Freefall\n                    or humanoid:GetState() == Enum.HumanoidStateType.Jumping then\n                    canDouble = true\n                end\n            end)\n        end\n    end)\n\n    local connection\n    connection = UserInputService.JumpRequest:Connect(function()\n        if not character.Parent then\n            connection:Disconnect()\n            return\n        end\n        if canDouble and airJumps < MAX_AIR_JUMPS then\n            airJumps += 1\n            local velocity = root.AssemblyLinearVelocity\n            root.AssemblyLinearVelocity = Vector3.new(velocity.X, JUMP_VELOCITY, velocity.Z)\n            humanoid:ChangeState(Enum.HumanoidStateType.Jumping)\n            ringEffect(root.Position - Vector3.new(0, 3, 0))\n        end\n    end)\nend\n\nplayer.CharacterAdded:Connect(setup)\nif player.Character then\n    task.spawn(setup, player.Character)\nend",
+  "id": "rb-0145"
+ },
+ {
+  "instruction": "Implement a wall jump in Luau that detects nearby walls with raycasts while airborne and launches the player away from the wall with a cooldown.",
+  "input": "",
+  "output": "local Players = game:GetService('Players')\nlocal UserInputService = game:GetService('UserInputService')\n\nlocal player = Players.LocalPlayer\nlocal WALL_DISTANCE = 2.5\nlocal PUSH_OFF = 38\nlocal UP_FORCE = 48\nlocal COOLDOWN = 0.35\nlocal lastJump = 0\n\nlocal DIRECTIONS = {}\nfor i = 0, 7 do\n    local angle = math.rad(i * 45)\n    table.insert(DIRECTIONS, Vector3.new(math.cos(angle), 0, math.sin(angle)))\nend\n\nlocal function findWall(root, ignore)\n    local params = RaycastParams.new()\n    params.FilterType = Enum.RaycastFilterType.Exclude\n    params.FilterDescendantsInstances = ignore\n    local closest\n    for _, direction in DIRECTIONS do\n        local result = workspace:Raycast(root.Position, direction * WALL_DISTANCE, params)\n        if result and math.abs(result.Normal.Y) < 0.3 then  -- mostly vertical surface\n            if not closest or result.Distance < closest.Distance then\n                closest = result\n            end\n        end\n    end\n    return closest\nend\n\nUserInputService.JumpRequest:Connect(function()\n    local character = player.Character\n    local humanoid = character and character:FindFirstChildOfClass('Humanoid')\n    local root = character and character:FindFirstChild('HumanoidRootPart')\n    if not humanoid or not root then return end\n    if os.clock() - lastJump < COOLDOWN then return end\n\n    local state = humanoid:GetState()\n    if state ~= Enum.HumanoidStateType.Freefall and state ~= Enum.HumanoidStateType.Jumping then return end\n\n    local wall = findWall(root, {character})\n    if wall then\n        lastJump = os.clock()\n        local away = Vector3.new(wall.Normal.X, 0, wall.Normal.Z).Unit\n        root.AssemblyLinearVelocity = away * PUSH_OFF + Vector3.new(0, UP_FORCE, 0)\n        humanoid:ChangeState(Enum.HumanoidStateType.Jumping)\n    end\nend)",
+  "id": "rb-0146"
+ },
+ {
+  "instruction": "Write a glide mechanic in Luau that limits fall speed while Space is held in the air and adds forward momentum, with a clean start and stop.",
+  "input": "",
+  "output": "local Players = game:GetService('Players')\nlocal RunService = game:GetService('RunService')\nlocal UserInputService = game:GetService('UserInputService')\n\nlocal player = Players.LocalPlayer\nlocal MAX_FALL_SPEED = 14\nlocal FORWARD_SPEED = 38\nlocal MIN_HEIGHT = 8\n\nlocal function getGlideEmitter(root)\n    local emitter = root:FindFirstChild('GlideTrail')\n    if not emitter then\n        emitter = Instance.new('ParticleEmitter')\n        emitter.Name = 'GlideTrail'\n        emitter.Texture = 'rbxasset://textures/particles/smoke_main.dds'\n        emitter.Color = ColorSequence.new(Color3.fromRGB(220, 240, 255))\n        emitter.LightEmission = 0.4\n        emitter.Size = NumberSequence.new({NumberSequenceKeypoint.new(0, 1), NumberSequenceKeypoint.new(1, 0)})\n        emitter.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0, 0.5), NumberSequenceKeypoint.new(1, 1)})\n        emitter.Lifetime = NumberRange.new(0.4, 0.7)\n        emitter.Rate = 30\n        emitter.Speed = NumberRange.new(0, 2)\n        emitter.Enabled = false\n        emitter.Parent = root\n    end\n    return emitter\nend\n\nlocal gliding = false\n\nRunService.Heartbeat:Connect(function()\n    local character = player.Character\n    local humanoid = character and character:FindFirstChildOfClass('Humanoid')\n    local root = character and character:FindFirstChild('HumanoidRootPart')\n    if not humanoid or not root then return end\n\n    local holding = UserInputService:IsKeyDown(Enum.KeyCode.Space)\n    local falling = humanoid:GetState() == Enum.HumanoidStateType.Freefall\n\n    local params = RaycastParams.new()\n    params.FilterType = Enum.RaycastFilterType.Exclude\n    params.FilterDescendantsInstances = {character}\n    local ground = workspace:Raycast(root.Position, Vector3.new(0, -MIN_HEIGHT, 0), params)\n\n    local shouldGlide = holding and falling and not ground\n    if shouldGlide then\n        local velocity = root.AssemblyLinearVelocity\n        local forward = Vector3.new(root.CFrame.LookVector.X, 0, root.CFrame.LookVector.Z)\n        if forward.Magnitude > 0.01 then\n            forward = forward.Unit * FORWARD_SPEED\n        end\n        root.AssemblyLinearVelocity = Vector3.new(\n            forward.X,\n            math.max(velocity.Y, -MAX_FALL_SPEED),  -- clamp downward speed only\n            forward.Z\n        )\n    end\n\n    if shouldGlide ~= gliding then\n        gliding = shouldGlide\n        getGlideEmitter(root).Enabled = gliding\n    end\nend)",
+  "id": "rb-0148"
+ },
+ {
+  "instruction": "Implement material-based footstep sounds in Luau using Humanoid.FloorMaterial, with step intervals that scale with speed and randomized pitch.",
+  "input": "",
+  "output": "local Players = game:GetService('Players')\nlocal RunService = game:GetService('RunService')\n\nlocal player = Players.LocalPlayer\n\nlocal FOOTSTEPS = {\n    [Enum.Material.Grass] = {'rbxassetid://REPLACE_WITH_FOOTSTEP_ID', 'rbxassetid://REPLACE_WITH_FOOTSTEP_ID'},\n    [Enum.Material.Concrete] = {'rbxassetid://REPLACE_WITH_FOOTSTEP_ID', 'rbxassetid://REPLACE_WITH_FOOTSTEP_ID'},\n    [Enum.Material.Wood] = {'rbxassetid://REPLACE_WITH_FOOTSTEP_ID', 'rbxassetid://REPLACE_WITH_FOOTSTEP_ID'},\n    [Enum.Material.Metal] = {'rbxassetid://REPLACE_WITH_FOOTSTEP_ID', 'rbxassetid://REPLACE_WITH_FOOTSTEP_ID'},\n}\nlocal DEFAULT = FOOTSTEPS[Enum.Material.Concrete]\nlocal rng = Random.new()\n\nlocal function setup(character)\n    local humanoid = character:WaitForChild('Humanoid')\n    local root = character:WaitForChild('HumanoidRootPart')\n\n    local sound = Instance.new('Sound')\n    sound.RollOffMaxDistance = 60\n    sound.Volume = 0.5\n    sound.Parent = root\n\n    local timer = 0\n    local connection\n    connection = RunService.Heartbeat:Connect(function(dt)\n        if not character.Parent then\n            connection:Disconnect()\n            return\n        end\n        local speed = Vector3.new(root.AssemblyLinearVelocity.X, 0, root.AssemblyLinearVelocity.Z).Magnitude\n        local grounded = humanoid.FloorMaterial ~= Enum.Material.Air\n        if grounded and speed > 2 then\n            timer += dt\n            local interval = math.clamp(5 / speed, 0.25, 0.6)  -- faster movement means faster steps\n            if timer >= interval then\n                timer = 0\n                local options = FOOTSTEPS[humanoid.FloorMaterial] or DEFAULT\n                sound.SoundId = options[rng:NextInteger(1, #options)]\n                sound.PlaybackSpeed = rng:NextNumber(0.92, 1.08)\n                if not sound.SoundId:find('REPLACE_WITH') then  -- skip until real ids are set\n                    sound:Play()\n                end\n            end\n        else\n            timer = 0\n        end\n    end)\nend\n\nplayer.CharacterAdded:Connect(setup)\nif player.Character then\n    task.spawn(setup, player.Character)\nend",
+  "id": "rb-0153"
+ },
+ {
+  "instruction": "Write an animated number counter in Luau that tweens a NumberValue and formats large numbers with thousand separators and optional suffixes.",
+  "input": "",
+  "output": "local TweenService = game:GetService('TweenService')\n\nlocal function formatNumber(n)\n    local s = tostring(math.floor(n))\n    local formatted = s:reverse():gsub('(%d%d%d)', '%1,'):reverse()\n    return (formatted:gsub('^,', ''))\nend\n\nlocal function abbreviate(n)\n    local suffixes = {'', 'K', 'M', 'B', 'T'}\n    local index = 1\n    while n >= 1000 and index < #suffixes do\n        n /= 1000\n        index += 1\n    end\n    return (index == 1 and tostring(math.floor(n)) or string.format('%.1f', n)) .. suffixes[index]\nend\n\nlocal function countTo(label, targetValue, duration, abbreviated)\n    local startValue = label:GetAttribute('Displayed') or 0\n    local value = Instance.new('NumberValue')\n    value.Value = startValue\n\n    local connection = value.Changed:Connect(function(v)\n        label:SetAttribute('Displayed', v)\n        label.Text = abbreviated and abbreviate(v) or formatNumber(v)\n    end)\n\n    local tween = TweenService:Create(value, TweenInfo.new(duration or 0.8, Enum.EasingStyle.Quart, Enum.EasingDirection.Out), {Value = targetValue})\n    tween:Play()\n    tween.Completed:Once(function()\n        connection:Disconnect()\n        value:Destroy()\n        label:SetAttribute('Displayed', targetValue)\n        label.Text = abbreviated and abbreviate(targetValue) or formatNumber(targetValue)\n    end)\nend\n\nreturn {CountTo = countTo, Format = formatNumber, Abbreviate = abbreviate}",
+  "id": "rb-0159"
+ },
+ {
+  "instruction": "Make an anime-style fire summoning circle pulse with multiple rings.",
+  "input": "",
+  "output": "local TweenService = game:GetService('TweenService')\nlocal Debris = game:GetService('Debris')\n\nlocal COLOR_START = Color3.fromRGB(255, 240, 150)\nlocal COLOR_END = Color3.fromRGB(50, 10, 0)\n\n-- Expanding rune rings that stack outward, shifting color per pulse\nlocal function fireRunePulses(position, pulses, radius)\n    for i = 1, pulses do\n        task.delay((i - 1) * 0.18, function()\n            local alpha = (i - 1) / math.max(pulses - 1, 1)\n            local ring = Instance.new('Part')\n            ring.Shape = Enum.PartType.Cylinder\n            ring.Anchored = true\n            ring.CanCollide = false\n            ring.CanQuery = false\n            ring.CanTouch = false\n            ring.Material = Enum.Material.Neon\n            ring.Color = COLOR_START:Lerp(COLOR_END, alpha)\n            ring.Transparency = 0.2\n            ring.Size = Vector3.new(0.2, 1, 1)\n            ring.CFrame = CFrame.new(position + Vector3.new(0, 0.1 * i, 0)) * CFrame.Angles(0, 0, math.rad(90))\n            ring.Parent = workspace\n\n            local target = radius * (0.5 + 0.5 * i / pulses)\n            TweenService:Create(ring, TweenInfo.new(0.6, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {\n                Size = Vector3.new(0.2, target * 2, target * 2),\n                Transparency = 1,\n            }):Play()\n            Debris:AddItem(ring, 0.7)\n        end)\n    end\nend\n\nreturn fireRunePulses",
+  "id": "rb-0173"
+ },
+ {
+  "instruction": "Write ice rune pulse rings that expand outward in sequence with a color shift.",
+  "input": "",
+  "output": "local TweenService = game:GetService('TweenService')\nlocal Debris = game:GetService('Debris')\n\nlocal COLOR_START = Color3.fromRGB(230, 250, 255)\nlocal COLOR_END = Color3.fromRGB(40, 90, 160)\n\n-- Expanding rune rings that stack outward, shifting color per pulse\nlocal function iceRunePulses(position, pulses, radius)\n    for i = 1, pulses do\n        task.delay((i - 1) * 0.18, function()\n            local alpha = (i - 1) / math.max(pulses - 1, 1)\n            local ring = Instance.new('Part')\n            ring.Shape = Enum.PartType.Cylinder\n            ring.Anchored = true\n            ring.CanCollide = false\n            ring.CanQuery = false\n            ring.CanTouch = false\n            ring.Material = Enum.Material.Ice\n            ring.Color = COLOR_START:Lerp(COLOR_END, alpha)\n            ring.Transparency = 0.2\n            ring.Size = Vector3.new(0.2, 1, 1)\n            ring.CFrame = CFrame.new(position + Vector3.new(0, 0.1 * i, 0)) * CFrame.Angles(0, 0, math.rad(90))\n            ring.Parent = workspace\n\n            local target = radius * (0.5 + 0.5 * i / pulses)\n            TweenService:Create(ring, TweenInfo.new(0.6, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {\n                Size = Vector3.new(0.2, target * 2, target * 2),\n                Transparency = 1,\n            }):Play()\n            Debris:AddItem(ring, 0.7)\n        end)\n    end\nend\n\nreturn iceRunePulses",
+  "id": "rb-0181"
+ },
+ {
+  "instruction": "Make an anime-style poison summoning circle pulse with multiple rings.",
+  "input": "",
+  "output": "local TweenService = game:GetService('TweenService')\nlocal Debris = game:GetService('Debris')\n\nlocal COLOR_START = Color3.fromRGB(200, 255, 120)\nlocal COLOR_END = Color3.fromRGB(20, 70, 10)\n\n-- Expanding rune rings that stack outward, shifting color per pulse\nlocal function poisonRunePulses(position, pulses, radius)\n    for i = 1, pulses do\n        task.delay((i - 1) * 0.18, function()\n            local alpha = (i - 1) / math.max(pulses - 1, 1)\n            local ring = Instance.new('Part')\n            ring.Shape = Enum.PartType.Cylinder\n            ring.Anchored = true\n            ring.CanCollide = false\n            ring.CanQuery = false\n            ring.CanTouch = false\n            ring.Material = Enum.Material.Neon\n            ring.Color = COLOR_START:Lerp(COLOR_END, alpha)\n            ring.Transparency = 0.2\n            ring.Size = Vector3.new(0.2, 1, 1)\n            ring.CFrame = CFrame.new(position + Vector3.new(0, 0.1 * i, 0)) * CFrame.Angles(0, 0, math.rad(90))\n            ring.Parent = workspace\n\n            local target = radius * (0.5 + 0.5 * i / pulses)\n            TweenService:Create(ring, TweenInfo.new(0.6, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {\n                Size = Vector3.new(0.2, target * 2, target * 2),\n                Transparency = 1,\n            }):Play()\n            Debris:AddItem(ring, 0.7)\n        end)\n    end\nend\n\nreturn poisonRunePulses",
+  "id": "rb-0197"
+ },
+ {
+  "instruction": "Write holy rune pulse rings that expand outward in sequence with a color shift.",
+  "input": "",
+  "output": "local TweenService = game:GetService('TweenService')\nlocal Debris = game:GetService('Debris')\n\nlocal COLOR_START = Color3.fromRGB(255, 255, 220)\nlocal COLOR_END = Color3.fromRGB(200, 150, 40)\n\n-- Expanding rune rings that stack outward, shifting color per pulse\nlocal function holyRunePulses(position, pulses, radius)\n    for i = 1, pulses do\n        task.delay((i - 1) * 0.18, function()\n            local alpha = (i - 1) / math.max(pulses - 1, 1)\n            local ring = Instance.new('Part')\n            ring.Shape = Enum.PartType.Cylinder\n            ring.Anchored = true\n            ring.CanCollide = false\n            ring.CanQuery = false\n            ring.CanTouch = false\n            ring.Material = Enum.Material.Neon\n            ring.Color = COLOR_START:Lerp(COLOR_END, alpha)\n            ring.Transparency = 0.2\n            ring.Size = Vector3.new(0.2, 1, 1)\n            ring.CFrame = CFrame.new(position + Vector3.new(0, 0.1 * i, 0)) * CFrame.Angles(0, 0, math.rad(90))\n            ring.Parent = workspace\n\n            local target = radius * (0.5 + 0.5 * i / pulses)\n            TweenService:Create(ring, TweenInfo.new(0.6, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {\n                Size = Vector3.new(0.2, target * 2, target * 2),\n                Transparency = 1,\n            }):Play()\n            Debris:AddItem(ring, 0.7)\n        end)\n    end\nend\n\nreturn holyRunePulses",
+  "id": "rb-0205"
+ },
+ {
+  "instruction": "Make an anime-style wind summoning circle pulse with multiple rings.",
+  "input": "",
+  "output": "local TweenService = game:GetService('TweenService')\nlocal Debris = game:GetService('Debris')\n\nlocal COLOR_START = Color3.fromRGB(255, 255, 255)\nlocal COLOR_END = Color3.fromRGB(120, 200, 180)\n\n-- Expanding rune rings that stack outward, shifting color per pulse\nlocal function windRunePulses(position, pulses, radius)\n    for i = 1, pulses do\n        task.delay((i - 1) * 0.18, function()\n            local alpha = (i - 1) / math.max(pulses - 1, 1)\n            local ring = Instance.new('Part')\n            ring.Shape = Enum.PartType.Cylinder\n            ring.Anchored = true\n            ring.CanCollide = false\n            ring.CanQuery = false\n            ring.CanTouch = false\n            ring.Material = Enum.Material.Glass\n            ring.Color = COLOR_START:Lerp(COLOR_END, alpha)\n            ring.Transparency = 0.2\n            ring.Size = Vector3.new(0.2, 1, 1)\n            ring.CFrame = CFrame.new(position + Vector3.new(0, 0.1 * i, 0)) * CFrame.Angles(0, 0, math.rad(90))\n            ring.Parent = workspace\n\n            local target = radius * (0.5 + 0.5 * i / pulses)\n            TweenService:Create(ring, TweenInfo.new(0.6, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {\n                Size = Vector3.new(0.2, target * 2, target * 2),\n                Transparency = 1,\n            }):Play()\n            Debris:AddItem(ring, 0.7)\n        end)\n    end\nend\n\nreturn windRunePulses",
+  "id": "rb-0221"
+ },
+ {
+  "instruction": "Write earth rune pulse rings that expand outward in sequence with a color shift.",
+  "input": "",
+  "output": "local TweenService = game:GetService('TweenService')\nlocal Debris = game:GetService('Debris')\n\nlocal COLOR_START = Color3.fromRGB(200, 170, 120)\nlocal COLOR_END = Color3.fromRGB(60, 40, 20)\n\n-- Expanding rune rings that stack outward, shifting color per pulse\nlocal function earthRunePulses(position, pulses, radius)\n    for i = 1, pulses do\n        task.delay((i - 1) * 0.18, function()\n            local alpha = (i - 1) / math.max(pulses - 1, 1)\n            local ring = Instance.new('Part')\n            ring.Shape = Enum.PartType.Cylinder\n            ring.Anchored = true\n            ring.CanCollide = false\n            ring.CanQuery = false\n            ring.CanTouch = false\n            ring.Material = Enum.Material.Slate\n            ring.Color = COLOR_START:Lerp(COLOR_END, alpha)\n            ring.Transparency = 0.2\n            ring.Size = Vector3.new(0.2, 1, 1)\n            ring.CFrame = CFrame.new(position + Vector3.new(0, 0.1 * i, 0)) * CFrame.Angles(0, 0, math.rad(90))\n            ring.Parent = workspace\n\n            local target = radius * (0.5 + 0.5 * i / pulses)\n            TweenService:Create(ring, TweenInfo.new(0.6, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {\n                Size = Vector3.new(0.2, target * 2, target * 2),\n                Transparency = 1,\n            }):Play()\n            Debris:AddItem(ring, 0.7)\n        end)\n    end\nend\n\nreturn earthRunePulses",
+  "id": "rb-0229"
+ },
+ {
+  "instruction": "Make an anime-style blood summoning circle pulse with multiple rings.",
+  "input": "",
+  "output": "local TweenService = game:GetService('TweenService')\nlocal Debris = game:GetService('Debris')\n\nlocal COLOR_START = Color3.fromRGB(255, 80, 80)\nlocal COLOR_END = Color3.fromRGB(60, 0, 0)\n\n-- Expanding rune rings that stack outward, shifting color per pulse\nlocal function bloodRunePulses(position, pulses, radius)\n    for i = 1, pulses do\n        task.delay((i - 1) * 0.18, function()\n            local alpha = (i - 1) / math.max(pulses - 1, 1)\n            local ring = Instance.new('Part')\n            ring.Shape = Enum.PartType.Cylinder\n            ring.Anchored = true\n            ring.CanCollide = false\n            ring.CanQuery = false\n            ring.CanTouch = false\n            ring.Material = Enum.Material.Neon\n            ring.Color = COLOR_START:Lerp(COLOR_END, alpha)\n            ring.Transparency = 0.2\n            ring.Size = Vector3.new(0.2, 1, 1)\n            ring.CFrame = CFrame.new(position + Vector3.new(0, 0.1 * i, 0)) * CFrame.Angles(0, 0, math.rad(90))\n            ring.Parent = workspace\n\n            local target = radius * (0.5 + 0.5 * i / pulses)\n            TweenService:Create(ring, TweenInfo.new(0.6, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {\n                Size = Vector3.new(0.2, target * 2, target * 2),\n                Transparency = 1,\n            }):Play()\n            Debris:AddItem(ring, 0.7)\n        end)\n    end\nend\n\nreturn bloodRunePulses",
+  "id": "rb-0245"
+ },
+ {
+  "instruction": "Write void rune pulse rings that expand outward in sequence with a color shift.",
+  "input": "",
+  "output": "local TweenService = game:GetService('TweenService')\nlocal Debris = game:GetService('Debris')\n\nlocal COLOR_START = Color3.fromRGB(200, 120, 255)\nlocal COLOR_END = Color3.fromRGB(10, 0, 30)\n\n-- Expanding rune rings that stack outward, shifting color per pulse\nlocal function voidRunePulses(position, pulses, radius)\n    for i = 1, pulses do\n        task.delay((i - 1) * 0.18, function()\n            local alpha = (i - 1) / math.max(pulses - 1, 1)\n            local ring = Instance.new('Part')\n            ring.Shape = Enum.PartType.Cylinder\n            ring.Anchored = true\n            ring.CanCollide = false\n            ring.CanQuery = false\n            ring.CanTouch = false\n            ring.Material = Enum.Material.Neon\n            ring.Color = COLOR_START:Lerp(COLOR_END, alpha)\n            ring.Transparency = 0.2\n            ring.Size = Vector3.new(0.2, 1, 1)\n            ring.CFrame = CFrame.new(position + Vector3.new(0, 0.1 * i, 0)) * CFrame.Angles(0, 0, math.rad(90))\n            ring.Parent = workspace\n\n            local target = radius * (0.5 + 0.5 * i / pulses)\n            TweenService:Create(ring, TweenInfo.new(0.6, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {\n                Size = Vector3.new(0.2, target * 2, target * 2),\n                Transparency = 1,\n            }):Play()\n            Debris:AddItem(ring, 0.7)\n        end)\n    end\nend\n\nreturn voidRunePulses",
+  "id": "rb-0253"
+ },
+ {
+  "instruction": "Make an anime-style nature summoning circle pulse with multiple rings.",
+  "input": "",
+  "output": "local TweenService = game:GetService('TweenService')\nlocal Debris = game:GetService('Debris')\n\nlocal COLOR_START = Color3.fromRGB(220, 255, 160)\nlocal COLOR_END = Color3.fromRGB(20, 90, 20)\n\n-- Expanding rune rings that stack outward, shifting color per pulse\nlocal function natureRunePulses(position, pulses, radius)\n    for i = 1, pulses do\n        task.delay((i - 1) * 0.18, function()\n            local alpha = (i - 1) / math.max(pulses - 1, 1)\n            local ring = Instance.new('Part')\n            ring.Shape = Enum.PartType.Cylinder\n            ring.Anchored = true\n            ring.CanCollide = false\n            ring.CanQuery = false\n            ring.CanTouch = false\n            ring.Material = Enum.Material.Grass\n            ring.Color = COLOR_START:Lerp(COLOR_END, alpha)\n            ring.Transparency = 0.2\n            ring.Size = Vector3.new(0.2, 1, 1)\n            ring.CFrame = CFrame.new(position + Vector3.new(0, 0.1 * i, 0)) * CFrame.Angles(0, 0, math.rad(90))\n            ring.Parent = workspace\n\n            local target = radius * (0.5 + 0.5 * i / pulses)\n            TweenService:Create(ring, TweenInfo.new(0.6, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {\n                Size = Vector3.new(0.2, target * 2, target * 2),\n                Transparency = 1,\n            }):Play()\n            Debris:AddItem(ring, 0.7)\n        end)\n    end\nend\n\nreturn natureRunePulses",
+  "id": "rb-0269"
+ },
+ {
+  "instruction": "Write cosmic rune pulse rings that expand outward in sequence with a color shift.",
+  "input": "",
+  "output": "local TweenService = game:GetService('TweenService')\nlocal Debris = game:GetService('Debris')\n\nlocal COLOR_START = Color3.fromRGB(255, 255, 255)\nlocal COLOR_END = Color3.fromRGB(70, 40, 160)\n\n-- Expanding rune rings that stack outward, shifting color per pulse\nlocal function cosmicRunePulses(position, pulses, radius)\n    for i = 1, pulses do\n        task.delay((i - 1) * 0.18, function()\n            local alpha = (i - 1) / math.max(pulses - 1, 1)\n            local ring = Instance.new('Part')\n            ring.Shape = Enum.PartType.Cylinder\n            ring.Anchored = true\n            ring.CanCollide = false\n            ring.CanQuery = false\n            ring.CanTouch = false\n            ring.Material = Enum.Material.Neon\n            ring.Color = COLOR_START:Lerp(COLOR_END, alpha)\n            ring.Transparency = 0.2\n            ring.Size = Vector3.new(0.2, 1, 1)\n            ring.CFrame = CFrame.new(position + Vector3.new(0, 0.1 * i, 0)) * CFrame.Angles(0, 0, math.rad(90))\n            ring.Parent = workspace\n\n            local target = radius * (0.5 + 0.5 * i / pulses)\n            TweenService:Create(ring, TweenInfo.new(0.6, Enum.EasingStyle.Cubic, Enum.EasingDirection.Out), {\n                Size = Vector3.new(0.2, target * 2, target * 2),\n                Transparency = 1,\n            }):Play()\n            Debris:AddItem(ring, 0.7)\n        end)\n    end\nend\n\nreturn cosmicRunePulses",
+  "id": "rb-0277"
+ },
+ {
+  "instruction": "What are the three Luau type-checking modes and when should I use strict mode?",
+  "input": "",
+  "output": "Luau supports --!nocheck (no analysis), --!nonstrict (the default, only infers what it can and treats unknowns as any) and --!strict (full inference, unknown or mismatched types are errors). Use strict for shared libraries, data models and networking code, where type errors are expensive, and keep nonstrict for quick scripts or code that leans heavily on dynamic Instance access. Export types from modules with export type so callers get autocomplete and checks.",
+  "id": "rb-0422"
+ },
+ {
+  "instruction": "When should I use table.freeze in Roblox Luau, and what are its limits?",
+  "input": "",
+  "output": "table.freeze makes a table read-only (writes error, and table.isfrozen reports true). Use it for constants, config and enum-like tables so no script can mutate shared state by accident. It is shallow: nested tables stay mutable unless you freeze them recursively. A frozen table cannot be unfrozen, so clone it with table.clone when you need a mutable copy.",
+  "id": "rb-0423"
+ },
+ {
+  "instruction": "How do buffers differ from strings in Luau, and when are they the better choice?",
+  "input": "",
+  "output": "A buffer is a fixed-size, mutable block of bytes with typed read and write functions (readu8, writef32, readi16 and so on) and it can be sent through RemoteEvents. Strings are immutable, so building or editing them creates new objects and garbage. Use buffers for binary serialization, compact network packets, grids and anything that needs fast, allocation-free numeric reads and writes.",
+  "id": "rb-0424"
+ },
+ {
+  "instruction": "Explain task.spawn, task.defer and task.delay and when each is appropriate.",
+  "input": "",
+  "output": "task.spawn runs the function immediately and continues it until it yields. task.defer schedules the function to run later in the same frame, at the end of the current resumption cycle, which is useful for batching and for avoiding reentrancy problems inside event handlers. task.delay runs the function after at least the given number of seconds. All three integrate with the Roblox scheduler and give proper error output, so prefer them over raw coroutines for game logic.",
+  "id": "rb-0425"
+ },
+ {
+  "instruction": "Why prefer the task library over coroutine.wrap or coroutine.create for game code?",
+  "input": "",
+  "output": "Threads created through the task library are managed by the Roblox scheduler, report errors with full tracebacks, can be cancelled with task.cancel, and resume correctly after yielding on engine functions such as task.wait. coroutine.wrap hides tracebacks and you must resume it yourself. Coroutines remain useful for generators and custom iterators where you control resumption explicitly.",
+  "id": "rb-0426"
+ },
+ {
+  "instruction": "What does StreamingEnabled change for client scripts, and how should I write code for it?",
+  "input": "",
+  "output": "With StreamingEnabled the client only holds parts near the player, so any instance may not exist yet or may disappear later. Never assume workspace children are present: use WaitForChild with a timeout, tag important objects and react to CollectionService signals, use ModelStreamingMode (Persistent or Atomic) for models that must stay whole, and use PersistentLoaded or content streaming callbacks before depending on distant geometry. The server always sees everything.",
+  "id": "rb-0428"
+ },
+ {
+  "instruction": "When should I use Attributes versus ValueObjects in Roblox?",
+  "input": "",
+  "output": "Attributes are lightweight, replicate automatically, work with GetAttributeChangedSignal and suit most state and configuration. ValueObjects such as NumberValue are real instances: they cost more, but they can be tweened (a NumberValue is a common tween proxy) and can hold children. Use attributes for data and ValueObjects when you need an instance-based proxy or tweening.",
+  "id": "rb-0435"
+ },
+ {
+  "instruction": "What are the differences between BindableEvent and a custom Signal class?",
+  "input": "",
+  "output": "BindableEvent copies arguments (tables are deep-copied, metatables are lost) and is an Instance, so it works across Actors and can be wired in Studio. A custom Signal passes references, preserves metatables and is faster with no instance cost, but only works inside one Luau VM. Use a custom Signal for in-module events and BindableEvents when crossing script contexts or Actors.",
+  "id": "rb-0436"
+ },
+ {
+  "instruction": "What do Selene and StyLua do for Luau projects?",
+  "input": "",
+  "output": "Selene is a linter that catches problems like unused variables, shadowing and deprecated APIs, and StyLua is an opinionated formatter that enforces a consistent code style. Running both in CI and as editor plugins keeps large teams consistent and catches bugs before runtime.",
+  "id": "rb-0456"
+ },
+ {
+  "instruction": "How can I unit test Luau code for Roblox?",
+  "input": "",
+  "output": "Structure logic as pure functions or modules that take dependencies as parameters, then test with TestEZ or Jest-Lua, which run inside Studio or via headless runners and Open Cloud Luau execution in CI. Mock services (DataStore, Players) behind small interfaces and avoid tests that depend on timing. Test the parts that are easy to get wrong: math, state machines, serialization and validation.",
+  "id": "rb-0457"
+ },
+ {
+  "instruction": "How do require caching and circular dependencies work in Roblox?",
+  "input": "",
+  "output": "A ModuleScript runs once per Luau VM (server and client separately), and every require returns the same cached value. Circular requires cause errors or hangs because the first module has not finished when the second requires it. Fix them by restructuring shared logic into a third module, passing dependencies in (dependency injection), or requiring lazily inside functions.",
+  "id": "rb-0458"
+ },
+ {
+  "instruction": "Are metatable-based classes slow in Luau, and when does it matter?",
+  "input": "",
+  "output": "Luau optimizes table and method access well, so normal OOP is fine for most code. Multi-level __index inheritance chains add lookups, so in hot loops with thousands of calls per frame cache methods in locals or flatten the hierarchy. Profile first, because allocation of per-frame tables usually matters more than method lookup cost.",
+  "id": "rb-0460"
+ },
+ {
+  "instruction": "What is the best way to build large strings in Luau?",
+  "input": "",
+  "output": "Appending with .. in a loop creates a new string each time and produces garbage. Collect pieces in a table and join once with table.concat, or write into a buffer for binary data. string.format is fine for readable single-use formatting but avoid generating strings every frame.",
+  "id": "rb-0462"
+ },
+ {
+  "instruction": "Does creating Vector3 values allocate memory in Luau?",
+  "input": "",
+  "output": "Vector3 is a native value type in Luau, so it is cheap and does not allocate a heap object like a table. Tables, closures and strings do allocate, so avoid creating them per frame in hot loops. You can freely use Vector3 math in per-frame code.",
+  "id": "rb-0463"
+ },
+ {
+  "instruction": "What are good debounce patterns in Roblox and what are the pitfalls?",
+  "input": "",
+  "output": "Prefer timestamp-based cooldowns (os.clock or server time) stored per player or per object, because they cannot get stuck. Boolean flags can stay true forever if the code between setting and clearing errors or yields forever, so wrap with pcall or use a token. Always clear per-player state on PlayerRemoving.",
+  "id": "rb-0464"
+ },
+ {
+  "instruction": "What is the difference between Changed and GetPropertyChangedSignal?",
+  "input": "",
+  "output": "Changed fires for any property change on that object (and for value objects it passes the new value), so it can fire very often, especially on parts. GetPropertyChangedSignal fires only for the named property. Prefer the targeted signal, and attribute-specific signals for attributes.",
+  "id": "rb-0465"
+ },
+ {
+  "instruction": "What is the difference between Destroy and setting Parent to nil?",
+  "input": "",
+  "output": "Destroy disconnects all connections on the instance, locks the Parent property, destroys descendants and fires Destroying, so it fully cleans up. Setting Parent to nil only removes the instance from the tree, leaving it and its connections alive in memory if referenced. Use Destroy for anything you are finished with, and Parent = nil only when pooling for reuse.",
+  "id": "rb-0467"
+ },
+ {
+  "instruction": "When should I use Debris:AddItem instead of task.delay for cleanup?",
+  "input": "",
+  "output": "Debris:AddItem is handled by the engine and will destroy the item after the delay even if the script that created it is destroyed or disabled. task.delay belongs to the calling script's thread lifecycle. For fire-and-forget visual effects Debris is the safer choice, and a Janitor is better for objects with complex ownership.",
+  "id": "rb-0468"
+ },
+ {
+  "instruction": "Why does this loop behave badly and how should it be rewritten with modern Luau?",
+  "input": "while true do\n    wait(0.1)\n    for _, p in game.Players:GetPlayers() do\n        updateOverhead(p)\n    end\nend",
+  "output": "Problems: wait() is deprecated and throttled, the loop has no way to stop, and per-player updates run for everyone on a fixed timer regardless of frame rate. Use task.wait or, better, an event-driven or Heartbeat-based approach.\n\nFixed version:\n\nlocal RunService = game:GetService('RunService')\nlocal Players = game:GetService('Players')\n\nlocal INTERVAL = 0.1\nlocal accumulator = 0\n\nlocal connection = RunService.Heartbeat:Connect(function(dt)\n    accumulator += dt\n    if accumulator < INTERVAL then return end\n    accumulator -= INTERVAL\n    for _, player in Players:GetPlayers() do\n        updateOverhead(player)\n    end\nend)\n\n-- connection:Disconnect() when the system shuts down",
+  "id": "rb-0483"
+ },
+ {
+  "instruction": "This script errors for some players when they join. Find the cause.",
+  "input": "Players.PlayerAdded:Connect(function(player)\n    local root = player.Character.HumanoidRootPart\n    root.Anchored = true\nend)",
+  "output": "Problem: PlayerAdded fires before the character exists, so player.Character is nil. Handle both the current character and future respawns.\n\nFixed version:\n\nlocal Players = game:GetService('Players')\n\nlocal function onCharacter(character)\n    local root = character:WaitForChild('HumanoidRootPart')\n    root.Anchored = true\nend\n\nlocal function onPlayer(player)\n    player.CharacterAdded:Connect(onCharacter)\n    if player.Character then\n        task.spawn(onCharacter, player.Character)\n    end\nend\n\nPlayers.PlayerAdded:Connect(onPlayer)\nfor _, player in Players:GetPlayers() do\n    task.spawn(onPlayer, player)  -- players that joined before the script ran\nend",
+  "id": "rb-0486"
+ },
+ {
+  "instruction": "This script breaks with StreamingEnabled because parts are missing on the client. Fix it.",
+  "input": "local door = workspace.Map.Doors.MainDoor\ndoor.Prompt.Triggered:Connect(openDoor)",
+  "output": "Problem: with StreamingEnabled the client may not have Map, Doors or MainDoor yet, so indexing them errors or returns nil. Do not hardcode deep paths. Tag the objects and react when they stream in.\n\nFixed version:\n\nlocal CollectionService = game:GetService('CollectionService')\n\nlocal function bind(door)\n    local prompt = door:FindFirstChildWhichIsA('ProximityPrompt', true)\n    if prompt then\n        prompt.Triggered:Connect(function(player)\n            openDoor(door, player)\n        end)\n    end\nend\n\nCollectionService:GetInstanceAddedSignal('MainDoor'):Connect(bind)\nfor _, door in CollectionService:GetTagged('MainDoor') do\n    task.spawn(bind, door)\nend",
+  "id": "rb-0502"
+ }
+]

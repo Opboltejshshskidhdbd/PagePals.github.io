@@ -1,0 +1,6087 @@
+{
+ "total": 507,
+ "shards": [
+  {
+   "file": "ai_01.json",
+   "entries": 11,
+   "bytes": 25497
+  },
+  {
+   "file": "architecture_01.json",
+   "entries": 29,
+   "bytes": 54359
+  },
+  {
+   "file": "architecture_02.json",
+   "entries": 38,
+   "bytes": 44076
+  },
+  {
+   "file": "camera_01.json",
+   "entries": 17,
+   "bytes": 32609
+  },
+  {
+   "file": "combat_01.json",
+   "entries": 23,
+   "bytes": 53646
+  },
+  {
+   "file": "combat_02.json",
+   "entries": 20,
+   "bytes": 52954
+  },
+  {
+   "file": "combat_03.json",
+   "entries": 27,
+   "bytes": 51870
+  },
+  {
+   "file": "combat_04.json",
+   "entries": 16,
+   "bytes": 49376
+  },
+  {
+   "file": "datastore_01.json",
+   "entries": 10,
+   "bytes": 11685
+  },
+  {
+   "file": "easing_01.json",
+   "entries": 30,
+   "bytes": 29196
+  },
+  {
+   "file": "misc_01.json",
+   "entries": 13,
+   "bytes": 8919
+  },
+  {
+   "file": "networking_01.json",
+   "entries": 22,
+   "bytes": 31514
+  },
+  {
+   "file": "physics_01.json",
+   "entries": 6,
+   "bytes": 9037
+  },
+  {
+   "file": "ui_01.json",
+   "entries": 39,
+   "bytes": 47548
+  },
+  {
+   "file": "vfx_01.json",
+   "entries": 45,
+   "bytes": 55092
+  },
+  {
+   "file": "vfx_02.json",
+   "entries": 31,
+   "bytes": 52525
+  },
+  {
+   "file": "vfx_03.json",
+   "entries": 34,
+   "bytes": 55405
+  },
+  {
+   "file": "vfx_04.json",
+   "entries": 33,
+   "bytes": 55120
+  },
+  {
+   "file": "vfx_05.json",
+   "entries": 26,
+   "bytes": 55348
+  },
+  {
+   "file": "vfx_06.json",
+   "entries": 18,
+   "bytes": 54518
+  },
+  {
+   "file": "vfx_07.json",
+   "entries": 19,
+   "bytes": 37558
+  }
+ ],
+ "entries": [
+  {
+   "id": "rb-0000",
+   "index": 0,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a Roblox Luau function that creates a multi-stage fire ParticleEmitter with color, size and transparency",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0001",
+   "index": 1,
+   "domain": "camera",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a Luau script for a smooth camera shake with falloff that cleans up after itself.",
+   "shard": "camera_01.json"
+  },
+  {
+   "id": "rb-0002",
+   "index": 2,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a reusable shockwave ring effect using TweenService and Debris.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0003",
+   "index": 3,
+   "domain": "ui",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "How do I implement a proper hitstop (freeze frame) in Roblox combat using animation speed?",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0004",
+   "index": 4,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a sword Trail effect that attaches to a tool handle.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0005",
+   "index": 5,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a Luau function that draws a jagged lightning bolt between two points.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0006",
+   "index": 6,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a dash afterimage (ghost trail) effect that clones the character's parts and fades them out.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0007",
+   "index": 7,
+   "domain": "ui",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a full-screen flash effect for a hit or ultimate using a ScreenGui.",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0008",
+   "index": 8,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a post-processing 'ultimate' effect with ColorCorrection, Blur and Bloom that tweens in and out.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0009",
+   "index": 9,
+   "domain": "camera",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "How do I create an FOV punch effect for impacts and dashes?",
+   "shard": "camera_01.json"
+  },
+  {
+   "id": "rb-0010",
+   "index": 10,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a Luau tornado effect where parts spiral upward around a center point.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0011",
+   "index": 11,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a function that raycasts down to find the ground position and normal for placing VFX.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0012",
+   "index": 12,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a rock debris burst effect for ground impacts that matches the surface material.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0013",
+   "index": 13,
+   "domain": "camera",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a meteor impact effect: falling neon meteor, then shockwave, particles and camera shake.",
+   "shard": "camera_01.json"
+  },
+  {
+   "id": "rb-0014",
+   "index": 14,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a reusable VFX object pool module in Luau to avoid constant Instance creation.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0015",
+   "index": 15,
+   "domain": "networking",
+   "kind": "code",
+   "context": "multi_script",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy",
+    "multiple_scripts_in_one_entry"
+   ],
+   "instruction": "Show a server-to-client VFX replication pattern using a RemoteEvent that only sends to nearby players.",
+   "shard": "networking_01.json"
+  },
+  {
+   "id": "rb-0016",
+   "index": 16,
+   "domain": "ui",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create floating damage numbers with a BillboardGui that rise and fade.",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0017",
+   "index": 17,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a healing effect with rising sparkles that bursts once and cleans up.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0018",
+   "index": 18,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create an ice freeze effect that encases a character in an ice block and shatters it.",
+   "shard": "combat_01.json"
+  },
+  {
+   "id": "rb-0019",
+   "index": 19,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a teleport flash effect with a light pillar at both the start and end positions.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0020",
+   "index": 20,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a charge-up effect where particles are pulled inward toward the player's hands.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0021",
+   "index": 21,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a raycast-based fireball projectile with a trail that explodes on impact.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0022",
+   "index": 22,
+   "domain": "ui",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "asset_placeholder"
+   ],
+   "instruction": "How do I sync a VFX with an animation keyframe using animation markers?",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0023",
+   "index": 23,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a laser beam effect that uses a raycast to stop at the first surface hit.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0024",
+   "index": 24,
+   "domain": "ui",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create an electric arc effect using a Beam with randomized curve sizes every frame.",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0025",
+   "index": 25,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a quick PointLight pulse that tweens brightness and range for muzzle flashes and impacts.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0026",
+   "index": 26,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "How can I scale VFX quality based on the player's graphics settings and device?",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0027",
+   "index": 27,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a ParticleEmitter that uses a flipbook texture sheet for animated smoke.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0028",
+   "index": 28,
+   "domain": "misc",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create an anime-style domain expansion sphere that grows quickly and fades out.",
+   "shard": "misc_01.json"
+  },
+  {
+   "id": "rb-0029",
+   "index": 29,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a fade-out helper that smoothly fades every descendant of a model or folder (parts, decals, particles, b",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0030",
+   "index": 30,
+   "domain": "camera",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create speed lines (wind streaks) around the camera for a sprint or dash effect.",
+   "shard": "camera_01.json"
+  },
+  {
+   "id": "rb-0031",
+   "index": 31,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a function that plays an impact sound together with a VFX burst, using randomized pitch to avoid repetit",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0032",
+   "index": 32,
+   "domain": "ui",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a rotating energy ring aura around a character's torso using CFrame updates.",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0033",
+   "index": 33,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a black hole effect that pulls nearby unanchored parts toward its center.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0034",
+   "index": 34,
+   "domain": "vfx",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What is the difference between Beam, Trail and ParticleEmitter in Roblox VFX, and when should I use each?",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0035",
+   "index": 35,
+   "domain": "vfx",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "When should I use ParticleEmitter:Emit() instead of Rate in Roblox?",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0036",
+   "index": 36,
+   "domain": "vfx",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "List the main principles that make anime-style combat VFX in Roblox feel good.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0037",
+   "index": 37,
+   "domain": "vfx",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What are the best practices for optimizing VFX performance in Roblox?",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0038",
+   "index": 38,
+   "domain": "vfx",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "Why should VFX run on the client instead of the server in Roblox?",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0039",
+   "index": 39,
+   "domain": "vfx",
+   "kind": "debug_fix",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Find the bug in this VFX script and give a fixed version.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0040",
+   "index": 40,
+   "domain": "vfx",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "This hit effect lags the game after many attacks. Explain why and fix it.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0041",
+   "index": 41,
+   "domain": "vfx",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Optimize this script: it leaves a ParticleEmitter running forever on every hit.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0042",
+   "index": 42,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a Luau function for a continuous fire aura ParticleEmitter around a character.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0043",
+   "index": 43,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a one-shot fire impact burst for a hit effect in Roblox.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0044",
+   "index": 44,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a fire-themed projectile trail using a Trail object on a moving part.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0045",
+   "index": 45,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a Luau function for a continuous ice aura ParticleEmitter around a character.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0046",
+   "index": 46,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a one-shot ice impact burst for a hit effect in Roblox.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0047",
+   "index": 47,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a ice-themed projectile trail using a Trail object on a moving part.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0048",
+   "index": 48,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a Luau function for a continuous lightning aura ParticleEmitter around a character.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0049",
+   "index": 49,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a one-shot lightning impact burst for a hit effect in Roblox.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0050",
+   "index": 50,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a lightning-themed projectile trail using a Trail object on a moving part.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0051",
+   "index": 51,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a Luau function for a continuous poison aura ParticleEmitter around a character.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0052",
+   "index": 52,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a one-shot poison impact burst for a hit effect in Roblox.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0053",
+   "index": 53,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a poison-themed projectile trail using a Trail object on a moving part.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0054",
+   "index": 54,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a Luau function for a continuous holy aura ParticleEmitter around a character.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0055",
+   "index": 55,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a one-shot holy impact burst for a hit effect in Roblox.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0056",
+   "index": 56,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a holy-themed projectile trail using a Trail object on a moving part.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0057",
+   "index": 57,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a Luau function for a continuous shadow aura ParticleEmitter around a character.",
+   "shard": "vfx_01.json"
+  },
+  {
+   "id": "rb-0058",
+   "index": 58,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a one-shot shadow impact burst for a hit effect in Roblox.",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0059",
+   "index": 59,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a shadow-themed projectile trail using a Trail object on a moving part.",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0060",
+   "index": 60,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a Luau function for a continuous wind aura ParticleEmitter around a character.",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0061",
+   "index": 61,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a one-shot wind impact burst for a hit effect in Roblox.",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0062",
+   "index": 62,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a wind-themed projectile trail using a Trail object on a moving part.",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0063",
+   "index": 63,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a production-grade Signal class in Luau with Connect, Once, Wait, Fire and DisconnectAll that is saf",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0064",
+   "index": 64,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a Janitor (Maid) class in Luau that cleans up connections, instances, threads, functions and objects in ",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0065",
+   "index": 65,
+   "domain": "camera",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a general-purpose analytic damped spring in Luau that works for numbers, Vector2 and Vector3 and sup",
+   "shard": "camera_01.json"
+  },
+  {
+   "id": "rb-0066",
+   "index": 66,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Build a minimal ECS (entity component system) in Luau for managing thousands of projectiles, with queries and ",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0067",
+   "index": 67,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a generic finite state machine (FSM) class in Luau with Enter/Update/Exit hooks, event transitions with ",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0068",
+   "index": 68,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "requires_sibling_module"
+   ],
+   "instruction": "Create a CollectionService-based component system in Luau that automatically constructs and destroys component",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0069",
+   "index": 69,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write an object-oriented Ability base class in Luau with cooldowns, a validate/execute pipeline, and a Firebal",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0070",
+   "index": 70,
+   "domain": "networking",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a token-bucket rate limiter module in Luau to protect RemoteEvents from spam, with per-player buckets an",
+   "shard": "networking_01.json"
+  },
+  {
+   "id": "rb-0071",
+   "index": 71,
+   "domain": "networking",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "requires_sibling_module",
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write a secure server-side ability RemoteEvent handler in Luau that validates payload types, cooldown, range, ",
+   "shard": "networking_01.json"
+  },
+  {
+   "id": "rb-0072",
+   "index": 72,
+   "domain": "networking",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement server-side lag compensation in Luau: record position history per player and validate a client's cla",
+   "shard": "networking_01.json"
+  },
+  {
+   "id": "rb-0073",
+   "index": 73,
+   "domain": "networking",
+   "kind": "code",
+   "context": "multi_script",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy",
+    "multiple_scripts_in_one_entry"
+   ],
+   "instruction": "Implement client-side prediction with server reconciliation for a dash ability in Roblox, including sequence n",
+   "shard": "networking_01.json"
+  },
+  {
+   "id": "rb-0074",
+   "index": 74,
+   "domain": "networking",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a snapshot interpolation system in Luau that smooths remote entities using a render delay buffer and sho",
+   "shard": "networking_01.json"
+  },
+  {
+   "id": "rb-0075",
+   "index": 75,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Serialize VFX replication packets into a compact buffer in Luau (effect id, position, color, random seed) and ",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0076",
+   "index": 76,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a deterministic fractal lightning generator in Luau that uses a replicated seed so the server sends ",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0077",
+   "index": 77,
+   "domain": "ui",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a server-side movement validator in Luau that detects speed hacks and teleports using per-frame distance",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0078",
+   "index": 78,
+   "domain": "networking",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a DataStore module in Luau with session locking (UpdateAsync), exponential-backoff retries, template rec",
+   "shard": "networking_01.json"
+  },
+  {
+   "id": "rb-0079",
+   "index": 79,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write async helpers in Luau: a safe task spawner that logs full tracebacks, and a retry wrapper with exponenti",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0080",
+   "index": 80,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy",
+    "multiple_scripts_in_one_entry"
+   ],
+   "instruction": "Write a Parallel Luau setup with Actors that splits a large batch of raycasts across worker actors and returns",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0081",
+   "index": 81,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a spatial hash grid in Luau for fast radius queries of thousands of moving entities such as projecti",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0082",
+   "index": 82,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a fixed-timestep projectile simulation with render interpolation in Luau using PreSimulation and PreRend",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0083",
+   "index": 83,
+   "domain": "ui",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a frame-budgeted VFX scheduler in Luau that spreads expensive effect spawns across frames using priorit",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0084",
+   "index": 84,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a profiling wrapper in Luau that labels functions for the MicroProfiler, tracks average and max millisec",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0085",
+   "index": 85,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a typed config sanitizer in strict Luau that validates untrusted effect parameters from clients (type ch",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0086",
+   "index": 86,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a data-driven VFX sequencer in Luau: effects are described as timelines of events, played by a single H",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0087",
+   "index": 87,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a time dilation (slow-motion) system in Luau that scales animation speed and ParticleEmitter TimeScale t",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0088",
+   "index": 88,
+   "domain": "camera",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "requires_sibling_module",
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Create a lock-on combat camera in Luau using springs for smooth following, framing both the player and the tar",
+   "shard": "camera_01.json"
+  },
+  {
+   "id": "rb-0089",
+   "index": 89,
+   "domain": "combat",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "requires_sibling_module"
+   ],
+   "instruction": "Write a first-person viewmodel weapon sway and walk bob system in Luau driven by springs and mouse delta.",
+   "shard": "combat_01.json"
+  },
+  {
+   "id": "rb-0090",
+   "index": 90,
+   "domain": "physics",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a Verlet rope simulation in Luau with pinned endpoints, distance constraints, gravity and Beam rendering",
+   "shard": "physics_01.json"
+  },
+  {
+   "id": "rb-0091",
+   "index": 91,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a cubic Bezier homing projectile in Luau that curves toward a moving target and orients along its tangen",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0092",
+   "index": 92,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Solve target leading in Luau: compute the intercept point for a projectile of constant speed against a moving ",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0093",
+   "index": 93,
+   "domain": "camera",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a Catmull-Rom spline sampler in Luau and use it to fly the camera through waypoints for a cinematic with",
+   "shard": "camera_01.json"
+  },
+  {
+   "id": "rb-0094",
+   "index": 94,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a hitbox module in Luau using GetPartBoundsInBox that deduplicates hits per swing, supports debug visual",
+   "shard": "combat_01.json"
+  },
+  {
+   "id": "rb-0095",
+   "index": 95,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write an R15 ragdoll module in Luau that swaps Motor6Ds for BallSocketConstraints and can restore the characte",
+   "shard": "combat_01.json"
+  },
+  {
+   "id": "rb-0096",
+   "index": 96,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a knockback function in Luau using modern physics constraints (LinearVelocity) with a velocity decay twe",
+   "shard": "combat_01.json"
+  },
+  {
+   "id": "rb-0097",
+   "index": 97,
+   "domain": "physics",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Attach an IKControl to an R15 character so the right hand reaches toward a target part with a smooth weight bl",
+   "shard": "physics_01.json"
+  },
+  {
+   "id": "rb-0098",
+   "index": 98,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create procedural orbiting energy orbs in Luau driven by 3D Perlin noise so each orb wanders organically aroun",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0099",
+   "index": 99,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a procedural ground crack effect in Luau that follows terrain with raycasts, uses noise for a jagged pat",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0100",
+   "index": 100,
+   "domain": "camera",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write an off-screen target indicator in Luau that converts a world position to viewport space, clamps it to th",
+   "shard": "camera_01.json"
+  },
+  {
+   "id": "rb-0101",
+   "index": 101,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a music ducking function in Luau using SoundGroups that lowers music during an ultimate attack and resto",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0102",
+   "index": 102,
+   "domain": "vfx",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "Explain the differences between Heartbeat, PreRender (RenderStepped), PreSimulation and PostSimulation in Robl",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0103",
+   "index": 103,
+   "domain": "architecture",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What are the main restrictions and best practices of Parallel Luau with Actors for heavy computation in Roblox",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0104",
+   "index": 104,
+   "domain": "vfx",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "Why does network ownership matter for projectiles and physics-driven VFX in Roblox, and how should I handle it",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0105",
+   "index": 105,
+   "domain": "vfx",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "How can I keep VFX identical across all clients without sending every detail over the network?",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0106",
+   "index": 106,
+   "domain": "architecture",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What causes memory leaks in Roblox Luau games and how do I systematically prevent them?",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0107",
+   "index": 107,
+   "domain": "networking",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "When should I choose server-authoritative, client-authoritative or hybrid (predicted) combat in Roblox, and wh",
+   "shard": "networking_01.json"
+  },
+  {
+   "id": "rb-0108",
+   "index": 108,
+   "domain": "vfx",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "How should I structure a large Roblox project for maintainability and performance?",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0109",
+   "index": 109,
+   "domain": "networking",
+   "kind": "debug_fix",
+   "context": "server",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Review this server script, explain every exploit it enables, and rewrite it securely.",
+   "shard": "networking_01.json"
+  },
+  {
+   "id": "rb-0110",
+   "index": 110,
+   "domain": "vfx",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "requires_sibling_module",
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Find the memory leak in this script and fix it with proper cleanup.",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0111",
+   "index": 111,
+   "domain": "ui",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Optimize this per-frame loop that scans the whole workspace and explain the cost.",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0112",
+   "index": 112,
+   "domain": "ai",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a generic binary heap (priority queue) in Luau with a custom comparator, for pathfinding and schedul",
+   "shard": "ai_01.json"
+  },
+  {
+   "id": "rb-0113",
+   "index": 113,
+   "domain": "ai",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "requires_sibling_module"
+   ],
+   "instruction": "Write an A* pathfinder on a 2D walkable grid in Luau using a binary heap, octile heuristic, 8-direction moveme",
+   "shard": "ai_01.json"
+  },
+  {
+   "id": "rb-0114",
+   "index": 114,
+   "domain": "ai",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a robust PathfindingService follower in Luau that retries failed computes, handles blocked paths and jum",
+   "shard": "ai_01.json"
+  },
+  {
+   "id": "rb-0115",
+   "index": 115,
+   "domain": "ai",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement steering behaviors (seek, arrive, flee, separation) as pure Vector3 functions in Luau and combine th",
+   "shard": "ai_01.json"
+  },
+  {
+   "id": "rb-0116",
+   "index": 116,
+   "domain": "ai",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Simulate boids (separation, alignment, cohesion) in Luau for a flock of anchored parts with a speed limit and ",
+   "shard": "ai_01.json"
+  },
+  {
+   "id": "rb-0117",
+   "index": 117,
+   "domain": "ai",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a behavior tree library in Luau with Sequence, Selector, Condition and Action nodes that remember runnin",
+   "shard": "ai_01.json"
+  },
+  {
+   "id": "rb-0118",
+   "index": 118,
+   "domain": "ai",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a utility AI decision system in Luau where actions are scored from considerations with response curv",
+   "shard": "ai_01.json"
+  },
+  {
+   "id": "rb-0119",
+   "index": 119,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a generic Instance object pool in Luau with a factory, reset function, max size and automatic return aft",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0120",
+   "index": 120,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a typed-channel EventBus in Luau with subscribe, once, publish and unsubscribe handles that is safe ",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0121",
+   "index": 121,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Build a service lifecycle bootstrapper in Luau (Knit-style) that loads every ModuleScript in a folder, calls I",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0122",
+   "index": 122,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a Promise library in Luau with Then, Catch, Await and Promise.all that supports chaining and error p",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0123",
+   "index": 123,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a Redux-style Store in Luau with reducers, actions, subscriptions that receive new and old state, and im",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0124",
+   "index": 124,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a reactive Value and Computed system in Luau where computed values automatically update when their depe",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0125",
+   "index": 125,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a server-time based cooldown manager in Luau keyed by player and ability name, with remaining-time queri",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0126",
+   "index": 126,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Design a stat system in Luau with base values and layered modifiers (additive, multiplicative, timed) that rec",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0127",
+   "index": 127,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a stacking inventory system in Luau with AddItem returning leftovers, RemoveItem, slot limits and serial",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0128",
+   "index": 128,
+   "domain": "datastore",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write an idempotent MarketplaceService.ProcessReceipt handler in Luau that never double-grants and retries saf",
+   "shard": "datastore_01.json"
+  },
+  {
+   "id": "rb-0129",
+   "index": 129,
+   "domain": "datastore",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Build a global leaderboard in Luau with OrderedDataStore: update scores safely, page the top 100 and cache use",
+   "shard": "datastore_01.json"
+  },
+  {
+   "id": "rb-0130",
+   "index": 130,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a party teleport function in Luau using a reserved server, TeleportOptions with data, retries and Telepo",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0131",
+   "index": 131,
+   "domain": "networking",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement cross-server announcements with MessagingService in Luau including payload validation, size limits a",
+   "shard": "networking_01.json"
+  },
+  {
+   "id": "rb-0132",
+   "index": 132,
+   "domain": "datastore",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a simple matchmaking queue in Luau using MemoryStoreService that groups 4 players and teleports them to ",
+   "shard": "datastore_01.json"
+  },
+  {
+   "id": "rb-0133",
+   "index": 133,
+   "domain": "datastore",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a batched HttpService logger in Luau that queues events, flushes JSON in batches, rate-limits requests ",
+   "shard": "datastore_01.json"
+  },
+  {
+   "id": "rb-0134",
+   "index": 134,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Generate a BSP (binary space partition) dungeon layout in Luau with a seeded Random, carved rooms and corridor",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0135",
+   "index": 135,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Generate Perlin-noise terrain in Luau with multiple octaves, material by height and yielding between rows to a",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0136",
+   "index": 136,
+   "domain": "ui",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a smooth day-night cycle in Luau that advances Lighting.ClockTime and blends ambient colors, brightn",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0137",
+   "index": 137,
+   "domain": "camera",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a client-side rain system in Luau where a particle emitter follows the camera and turns off when the pl",
+   "shard": "camera_01.json"
+  },
+  {
+   "id": "rb-0138",
+   "index": 138,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a server-authoritative sliding door/elevator mechanism in Luau using attributes, a ProximityPrompt, Twee",
+   "shard": "architecture_01.json"
+  },
+  {
+   "id": "rb-0139",
+   "index": 139,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a round-based game loop in Luau (Intermission, Playing, Ended) with minimum players, replicated time",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0140",
+   "index": 140,
+   "domain": "combat",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy",
+    "asset_placeholder"
+   ],
+   "instruction": "Implement a client-side melee combo system in Luau with an input buffer, chain window, combo reset timer and s",
+   "shard": "combat_01.json"
+  },
+  {
+   "id": "rb-0141",
+   "index": 141,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a server-side block and parry system in Luau with a timing window for perfect parries, facing check, dam",
+   "shard": "combat_01.json"
+  },
+  {
+   "id": "rb-0142",
+   "index": 142,
+   "domain": "combat",
+   "kind": "code",
+   "context": "multi_script",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy",
+    "multiple_scripts_in_one_entry"
+   ],
+   "instruction": "Create a dodge roll with invincibility frames in Luau: client roll movement via LinearVelocity, server-validat",
+   "shard": "combat_01.json"
+  },
+  {
+   "id": "rb-0143",
+   "index": 143,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a poise and stagger system in Luau where damage drains poise, poise regenerates after a delay, and b",
+   "shard": "combat_01.json"
+  },
+  {
+   "id": "rb-0144",
+   "index": 144,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write a server-authoritative sprint system in Luau with stamina drain, regeneration delay, exhaustion lockout ",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0145",
+   "index": 145,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a double jump in Luau for the local player that uses JumpRequest, resets on landing and applies a clean ",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0146",
+   "index": 146,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a wall jump in Luau that detects nearby walls with raycasts while airborne and launches the player a",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0147",
+   "index": 147,
+   "domain": "camera",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a grappling hook in Luau: raycast from the camera, anchor a hook point, pull the player with AlignPosit",
+   "shard": "camera_01.json"
+  },
+  {
+   "id": "rb-0148",
+   "index": 148,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a glide mechanic in Luau that limits fall speed while Space is held in the air and adds forward momentum",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0149",
+   "index": 149,
+   "domain": "ui",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "requires_sibling_module"
+   ],
+   "instruction": "Implement spring-based camera recoil for a gun in Luau that applies per-frame deltas (no compounding drift) an",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0150",
+   "index": 150,
+   "domain": "networking",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a server-side Tool script in Luau with a fire rate limit, magazine and reload state machine that cancels",
+   "shard": "networking_01.json"
+  },
+  {
+   "id": "rb-0151",
+   "index": 151,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a hit flash effect using the Highlight instance in Luau that tweens fill transparency and cleans up eve",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0152",
+   "index": 152,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a dissolve/vanish effect in Luau that fades every part of a model while shrinking it and bursting partic",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0153",
+   "index": 153,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "asset_placeholder"
+   ],
+   "instruction": "Implement material-based footstep sounds in Luau using Humanoid.FloorMaterial, with step intervals that scale ",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0154",
+   "index": 154,
+   "domain": "ui",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Build a health bar in Luau UI with an instant fill, a delayed yellow damage trail and a smooth heal animation ",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0155",
+   "index": 155,
+   "domain": "ui",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create an ability cooldown button overlay in Luau that shrinks a cover frame and shows remaining seconds based",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0156",
+   "index": 156,
+   "domain": "ui",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a low-health screen vignette from four edge frames with UIGradient transparency that pulses faster as hea",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0157",
+   "index": 157,
+   "domain": "ui",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a toast notification manager in Luau that queues messages, shows at most three at a time, slides them in",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0158",
+   "index": 158,
+   "domain": "ui",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a typewriter text effect in Luau using MaxVisibleGraphemes with RichText support, punctuation pauses",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0159",
+   "index": 159,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write an animated number counter in Luau that tweens a NumberValue and formats large numbers with thousand sep",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0160",
+   "index": 160,
+   "domain": "ui",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Build a circular radar/minimap in Luau that converts world offsets relative to the player's heading into UI bl",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0161",
+   "index": 161,
+   "domain": "ui",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a rotating 3D item preview in Luau using a ViewportFrame with its own camera, lighting and a model clon",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0162",
+   "index": 162,
+   "domain": "ui",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a data-driven branching dialogue system in Luau with conditions, callbacks, typed text and choice button",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0163",
+   "index": 163,
+   "domain": "physics",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a hover vehicle in Luau using raycast spring suspension at four corners with damping, applying impul",
+   "shard": "physics_01.json"
+  },
+  {
+   "id": "rb-0164",
+   "index": 164,
+   "domain": "physics",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a destructible wall effect in Luau that voxelizes a part into debris cubes, pushes them away from the im",
+   "shard": "physics_01.json"
+  },
+  {
+   "id": "rb-0165",
+   "index": 165,
+   "domain": "ai",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create an auto-aiming turret in Luau that picks the nearest visible target, rotates with a limited turn speed ",
+   "shard": "ai_01.json"
+  },
+  {
+   "id": "rb-0166",
+   "index": 166,
+   "domain": "camera",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a spectator camera system in Luau that cycles through living players with Q and E, follows respawns and ",
+   "shard": "camera_01.json"
+  },
+  {
+   "id": "rb-0167",
+   "index": 167,
+   "domain": "ai",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Build an NPC AI in Luau with Patrol, Chase, Attack and Return states using vision cone detection, line of sigh",
+   "shard": "ai_01.json"
+  },
+  {
+   "id": "rb-0168",
+   "index": 168,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a Luau function for a continuous fire aura ParticleEmitter around a character (alternative implementatio",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0169",
+   "index": 169,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a reusable fire hit-spark function using ParticleEmitter:Emit.",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0170",
+   "index": 170,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a fire bolt part with attachments and a Trail object.",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0171",
+   "index": 171,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a fire shockwave ring effect using TweenService and Debris.",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0172",
+   "index": 172,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a fire channeling effect with inward particles and a growing PointLight.",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0173",
+   "index": 173,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make an anime-style fire summoning circle pulse with multiple rings.",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0174",
+   "index": 174,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a fire beam attack using a Beam between two attachments that narrows to nothing.",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0175",
+   "index": 175,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Create a layered fire explosion effect function for Roblox with multiple elements.",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0176",
+   "index": 176,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a looping ice aura effect that attaches to HumanoidRootPart in Roblox.",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0177",
+   "index": 177,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a ice impact particle burst that cleans itself up with Debris.",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0178",
+   "index": 178,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a ice-themed projectile orb with a Trail in Luau.",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0179",
+   "index": 179,
+   "domain": "ui",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create an expanding flat ice ring that fades out, for ground impacts.",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0180",
+   "index": 180,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a ice power-gathering effect for the wind-up of an ability.",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0181",
+   "index": 181,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write ice rune pulse rings that expand outward in sequence with a color shift.",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0182",
+   "index": 182,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a ice laser-style Beam effect with a three-color gradient.",
+   "shard": "vfx_02.json"
+  },
+  {
+   "id": "rb-0183",
+   "index": 183,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Build a full ice blast effect combining PointLight, ParticleEmitter and an expanding ring.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0184",
+   "index": 184,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "How do I make a lightning-themed character aura with color, size and transparency curves?",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0185",
+   "index": 185,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a one-shot lightning impact burst for a hit effect in Roblox (alternative implementation with color, si",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0186",
+   "index": 186,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a function that builds a lightning projectile with a glowing trail.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0187",
+   "index": 187,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a lightning-colored shockwave using a rotated cylinder part.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0188",
+   "index": 188,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a lightning charge-up effect where particles are pulled inward toward the hands.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0189",
+   "index": 189,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a stacked pulse effect for a lightning ground ability using delayed rings.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0190",
+   "index": 190,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a lightning ray effect that tweens its width to zero and cleans up.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0191",
+   "index": 191,
+   "domain": "camera",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write a composite lightning explosion: light flash, particle burst, shockwave ring and camera shake event.",
+   "shard": "camera_01.json"
+  },
+  {
+   "id": "rb-0192",
+   "index": 192,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a Luau function for a continuous poison aura ParticleEmitter around a character (alternative implementat",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0193",
+   "index": 193,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a reusable poison hit-spark function using ParticleEmitter:Emit.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0194",
+   "index": 194,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a poison bolt part with attachments and a Trail object.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0195",
+   "index": 195,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a poison shockwave ring effect using TweenService and Debris.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0196",
+   "index": 196,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a poison channeling effect with inward particles and a growing PointLight.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0197",
+   "index": 197,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make an anime-style poison summoning circle pulse with multiple rings.",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0198",
+   "index": 198,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a poison beam attack using a Beam between two attachments that narrows to nothing.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0199",
+   "index": 199,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Create a layered poison explosion effect function for Roblox with multiple elements.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0200",
+   "index": 200,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a looping holy aura effect that attaches to HumanoidRootPart in Roblox.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0201",
+   "index": 201,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a holy impact particle burst that cleans itself up with Debris.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0202",
+   "index": 202,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a holy-themed projectile orb with a Trail in Luau.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0203",
+   "index": 203,
+   "domain": "ui",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create an expanding flat holy ring that fades out, for ground impacts.",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0204",
+   "index": 204,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a holy power-gathering effect for the wind-up of an ability.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0205",
+   "index": 205,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write holy rune pulse rings that expand outward in sequence with a color shift.",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0206",
+   "index": 206,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a holy laser-style Beam effect with a three-color gradient.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0207",
+   "index": 207,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Build a full holy blast effect combining PointLight, ParticleEmitter and an expanding ring.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0208",
+   "index": 208,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "How do I make a shadow-themed character aura with color, size and transparency curves?",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0209",
+   "index": 209,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a one-shot shadow impact burst for a hit effect in Roblox (alternative implementation with color, size ",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0210",
+   "index": 210,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a function that builds a shadow projectile with a glowing trail.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0211",
+   "index": 211,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a shadow-colored shockwave using a rotated cylinder part.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0212",
+   "index": 212,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a shadow charge-up effect where particles are pulled inward toward the hands.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0213",
+   "index": 213,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a stacked pulse effect for a shadow ground ability using delayed rings.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0214",
+   "index": 214,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a shadow ray effect that tweens its width to zero and cleans up.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0215",
+   "index": 215,
+   "domain": "camera",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write a composite shadow explosion: light flash, particle burst, shockwave ring and camera shake event.",
+   "shard": "camera_01.json"
+  },
+  {
+   "id": "rb-0216",
+   "index": 216,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a Luau function for a continuous wind aura ParticleEmitter around a character (alternative implementatio",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0217",
+   "index": 217,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a reusable wind hit-spark function using ParticleEmitter:Emit.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0218",
+   "index": 218,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a wind bolt part with attachments and a Trail object.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0219",
+   "index": 219,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a wind shockwave ring effect using TweenService and Debris.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0220",
+   "index": 220,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a wind channeling effect with inward particles and a growing PointLight.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0221",
+   "index": 221,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make an anime-style wind summoning circle pulse with multiple rings.",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0222",
+   "index": 222,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a wind beam attack using a Beam between two attachments that narrows to nothing.",
+   "shard": "vfx_03.json"
+  },
+  {
+   "id": "rb-0223",
+   "index": 223,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Create a layered wind explosion effect function for Roblox with multiple elements.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0224",
+   "index": 224,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a looping earth aura effect that attaches to HumanoidRootPart in Roblox.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0225",
+   "index": 225,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a earth impact particle burst that cleans itself up with Debris.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0226",
+   "index": 226,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a earth-themed projectile orb with a Trail in Luau.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0227",
+   "index": 227,
+   "domain": "ui",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create an expanding flat earth ring that fades out, for ground impacts.",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0228",
+   "index": 228,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a earth power-gathering effect for the wind-up of an ability.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0229",
+   "index": 229,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write earth rune pulse rings that expand outward in sequence with a color shift.",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0230",
+   "index": 230,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a earth laser-style Beam effect with a three-color gradient.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0231",
+   "index": 231,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Build a full earth blast effect combining PointLight, ParticleEmitter and an expanding ring.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0232",
+   "index": 232,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "How do I make a water-themed character aura with color, size and transparency curves?",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0233",
+   "index": 233,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a one-shot water impact burst for a hit effect in Roblox.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0234",
+   "index": 234,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a function that builds a water projectile with a glowing trail.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0235",
+   "index": 235,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a water-colored shockwave using a rotated cylinder part.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0236",
+   "index": 236,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a water charge-up effect where particles are pulled inward toward the hands.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0237",
+   "index": 237,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a stacked pulse effect for a water ground ability using delayed rings.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0238",
+   "index": 238,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a water ray effect that tweens its width to zero and cleans up.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0239",
+   "index": 239,
+   "domain": "camera",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write a composite water explosion: light flash, particle burst, shockwave ring and camera shake event.",
+   "shard": "camera_01.json"
+  },
+  {
+   "id": "rb-0240",
+   "index": 240,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a Luau function for a continuous blood aura ParticleEmitter around a character.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0241",
+   "index": 241,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a reusable blood hit-spark function using ParticleEmitter:Emit.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0242",
+   "index": 242,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a blood bolt part with attachments and a Trail object.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0243",
+   "index": 243,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a blood shockwave ring effect using TweenService and Debris.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0244",
+   "index": 244,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a blood channeling effect with inward particles and a growing PointLight.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0245",
+   "index": 245,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make an anime-style blood summoning circle pulse with multiple rings.",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0246",
+   "index": 246,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a blood beam attack using a Beam between two attachments that narrows to nothing.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0247",
+   "index": 247,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Create a layered blood explosion effect function for Roblox with multiple elements.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0248",
+   "index": 248,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a looping void aura effect that attaches to HumanoidRootPart in Roblox.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0249",
+   "index": 249,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a void impact particle burst that cleans itself up with Debris.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0250",
+   "index": 250,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a void-themed projectile orb with a Trail in Luau.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0251",
+   "index": 251,
+   "domain": "ui",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create an expanding flat void ring that fades out, for ground impacts.",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0252",
+   "index": 252,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a void power-gathering effect for the wind-up of an ability.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0253",
+   "index": 253,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write void rune pulse rings that expand outward in sequence with a color shift.",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0254",
+   "index": 254,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a void laser-style Beam effect with a three-color gradient.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0255",
+   "index": 255,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Build a full void blast effect combining PointLight, ParticleEmitter and an expanding ring.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0256",
+   "index": 256,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "How do I make a plasma-themed character aura with color, size and transparency curves?",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0257",
+   "index": 257,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a one-shot plasma impact burst for a hit effect in Roblox.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0258",
+   "index": 258,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a function that builds a plasma projectile with a glowing trail.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0259",
+   "index": 259,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a plasma-colored shockwave using a rotated cylinder part.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0260",
+   "index": 260,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a plasma charge-up effect where particles are pulled inward toward the hands.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0261",
+   "index": 261,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a stacked pulse effect for a plasma ground ability using delayed rings.",
+   "shard": "vfx_04.json"
+  },
+  {
+   "id": "rb-0262",
+   "index": 262,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a plasma ray effect that tweens its width to zero and cleans up.",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0263",
+   "index": 263,
+   "domain": "camera",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write a composite plasma explosion: light flash, particle burst, shockwave ring and camera shake event.",
+   "shard": "camera_01.json"
+  },
+  {
+   "id": "rb-0264",
+   "index": 264,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a Luau function for a continuous nature aura ParticleEmitter around a character.",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0265",
+   "index": 265,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a reusable nature hit-spark function using ParticleEmitter:Emit.",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0266",
+   "index": 266,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a nature bolt part with attachments and a Trail object.",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0267",
+   "index": 267,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a nature shockwave ring effect using TweenService and Debris.",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0268",
+   "index": 268,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a nature channeling effect with inward particles and a growing PointLight.",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0269",
+   "index": 269,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make an anime-style nature summoning circle pulse with multiple rings.",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0270",
+   "index": 270,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a nature beam attack using a Beam between two attachments that narrows to nothing.",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0271",
+   "index": 271,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Create a layered nature explosion effect function for Roblox with multiple elements.",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0272",
+   "index": 272,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create a looping cosmic aura effect that attaches to HumanoidRootPart in Roblox.",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0273",
+   "index": 273,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a cosmic impact particle burst that cleans itself up with Debris.",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0274",
+   "index": 274,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a cosmic-themed projectile orb with a Trail in Luau.",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0275",
+   "index": 275,
+   "domain": "ui",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Create an expanding flat cosmic ring that fades out, for ground impacts.",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0276",
+   "index": 276,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Make a cosmic power-gathering effect for the wind-up of an ability.",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0277",
+   "index": 277,
+   "domain": "architecture",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write cosmic rune pulse rings that expand outward in sequence with a color shift.",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0278",
+   "index": 278,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write a cosmic laser-style Beam effect with a three-color gradient.",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0279",
+   "index": 279,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Build a full cosmic blast effect combining PointLight, ParticleEmitter and an expanding ring.",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0280",
+   "index": 280,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Meteor Strike', a area-of-effect fire ability, with validation,",
+   "shard": "combat_01.json"
+  },
+  {
+   "id": "rb-0281",
+   "index": 281,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the fire-themed area-of-effect ability 'Meteor Strike' that listens to V",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0282",
+   "index": 282,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Frost Nova', a area-of-effect ice ability, with validation, coo",
+   "shard": "combat_01.json"
+  },
+  {
+   "id": "rb-0283",
+   "index": 283,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the ice-themed area-of-effect ability 'Frost Nova' that listens to VFXRe",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0284",
+   "index": 284,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Thunder Clap', a area-of-effect lightning ability, with validat",
+   "shard": "combat_01.json"
+  },
+  {
+   "id": "rb-0285",
+   "index": 285,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the lightning-themed area-of-effect ability 'Thunder Clap' that listens ",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0286",
+   "index": 286,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Toxic Cloud', a area-of-effect poison ability, with validation,",
+   "shard": "combat_01.json"
+  },
+  {
+   "id": "rb-0287",
+   "index": 287,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the poison-themed area-of-effect ability 'Toxic Cloud' that listens to V",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0288",
+   "index": 288,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Holy Judgement', a area-of-effect holy ability, with validation",
+   "shard": "combat_01.json"
+  },
+  {
+   "id": "rb-0289",
+   "index": 289,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the holy-themed area-of-effect ability 'Holy Judgement' that listens to ",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0290",
+   "index": 290,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Shadow Eruption', a area-of-effect shadow ability, with validat",
+   "shard": "combat_01.json"
+  },
+  {
+   "id": "rb-0291",
+   "index": 291,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the shadow-themed area-of-effect ability 'Shadow Eruption' that listens ",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0292",
+   "index": 292,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Earthquake', a area-of-effect earth ability, with validation, c",
+   "shard": "combat_01.json"
+  },
+  {
+   "id": "rb-0293",
+   "index": 293,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the earth-themed area-of-effect ability 'Earthquake' that listens to VFX",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0294",
+   "index": 294,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Tidal Surge', a area-of-effect water ability, with validation, ",
+   "shard": "combat_01.json"
+  },
+  {
+   "id": "rb-0295",
+   "index": 295,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the water-themed area-of-effect ability 'Tidal Surge' that listens to VF",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0296",
+   "index": 296,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Flame Breath', a cone fire ability, with validation, cooldown, ",
+   "shard": "combat_01.json"
+  },
+  {
+   "id": "rb-0297",
+   "index": 297,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the fire-themed cone ability 'Flame Breath' that listens to VFXRemote.",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0298",
+   "index": 298,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Frost Breath', a cone ice ability, with validation, cooldown, s",
+   "shard": "combat_01.json"
+  },
+  {
+   "id": "rb-0299",
+   "index": 299,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the ice-themed cone ability 'Frost Breath' that listens to VFXRemote.",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0300",
+   "index": 300,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Wind Slash', a cone wind ability, with validation, cooldown, se",
+   "shard": "combat_01.json"
+  },
+  {
+   "id": "rb-0301",
+   "index": 301,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the wind-themed cone ability 'Wind Slash' that listens to VFXRemote.",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0302",
+   "index": 302,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Venom Spray', a cone poison ability, with validation, cooldown,",
+   "shard": "combat_01.json"
+  },
+  {
+   "id": "rb-0303",
+   "index": 303,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the poison-themed cone ability 'Venom Spray' that listens to VFXRemote.",
+   "shard": "vfx_05.json"
+  },
+  {
+   "id": "rb-0304",
+   "index": 304,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Blood Scythe', a cone blood ability, with validation, cooldown,",
+   "shard": "combat_01.json"
+  },
+  {
+   "id": "rb-0305",
+   "index": 305,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the blood-themed cone ability 'Blood Scythe' that listens to VFXRemote.",
+   "shard": "vfx_06.json"
+  },
+  {
+   "id": "rb-0306",
+   "index": 306,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Void Maw', a cone void ability, with validation, cooldown, serv",
+   "shard": "combat_01.json"
+  },
+  {
+   "id": "rb-0307",
+   "index": 307,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the void-themed cone ability 'Void Maw' that listens to VFXRemote.",
+   "shard": "vfx_06.json"
+  },
+  {
+   "id": "rb-0308",
+   "index": 308,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Solar Flare', a cone holy ability, with validation, cooldown, s",
+   "shard": "combat_02.json"
+  },
+  {
+   "id": "rb-0309",
+   "index": 309,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the holy-themed cone ability 'Solar Flare' that listens to VFXRemote.",
+   "shard": "vfx_06.json"
+  },
+  {
+   "id": "rb-0310",
+   "index": 310,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Lightning Lance', a line/beam lightning ability, with validatio",
+   "shard": "combat_02.json"
+  },
+  {
+   "id": "rb-0311",
+   "index": 311,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the lightning-themed line/beam ability 'Lightning Lance' that listens to",
+   "shard": "vfx_06.json"
+  },
+  {
+   "id": "rb-0312",
+   "index": 312,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Plasma Beam', a line/beam plasma ability, with validation, cool",
+   "shard": "combat_02.json"
+  },
+  {
+   "id": "rb-0313",
+   "index": 313,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the plasma-themed line/beam ability 'Plasma Beam' that listens to VFXRem",
+   "shard": "vfx_06.json"
+  },
+  {
+   "id": "rb-0314",
+   "index": 314,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Ice Spear Barrage', a line/beam ice ability, with validation, c",
+   "shard": "combat_02.json"
+  },
+  {
+   "id": "rb-0315",
+   "index": 315,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the ice-themed line/beam ability 'Ice Spear Barrage' that listens to VFX",
+   "shard": "vfx_06.json"
+  },
+  {
+   "id": "rb-0316",
+   "index": 316,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Vine Lash', a line/beam nature ability, with validation, cooldo",
+   "shard": "combat_02.json"
+  },
+  {
+   "id": "rb-0317",
+   "index": 317,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the nature-themed line/beam ability 'Vine Lash' that listens to VFXRemot",
+   "shard": "vfx_06.json"
+  },
+  {
+   "id": "rb-0318",
+   "index": 318,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Cosmic Ray', a line/beam cosmic ability, with validation, coold",
+   "shard": "combat_02.json"
+  },
+  {
+   "id": "rb-0319",
+   "index": 319,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the cosmic-themed line/beam ability 'Cosmic Ray' that listens to VFXRemo",
+   "shard": "vfx_06.json"
+  },
+  {
+   "id": "rb-0320",
+   "index": 320,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Water Jet', a line/beam water ability, with validation, cooldow",
+   "shard": "combat_02.json"
+  },
+  {
+   "id": "rb-0321",
+   "index": 321,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the water-themed line/beam ability 'Water Jet' that listens to VFXRemote",
+   "shard": "vfx_06.json"
+  },
+  {
+   "id": "rb-0322",
+   "index": 322,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Shadow Pierce', a line/beam shadow ability, with validation, co",
+   "shard": "combat_02.json"
+  },
+  {
+   "id": "rb-0323",
+   "index": 323,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the shadow-themed line/beam ability 'Shadow Pierce' that listens to VFXR",
+   "shard": "vfx_06.json"
+  },
+  {
+   "id": "rb-0324",
+   "index": 324,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Fireball', a projectile fire ability, with validation, cooldown",
+   "shard": "combat_02.json"
+  },
+  {
+   "id": "rb-0325",
+   "index": 325,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the fire-themed projectile ability 'Fireball' that listens to VFXRemote.",
+   "shard": "vfx_06.json"
+  },
+  {
+   "id": "rb-0326",
+   "index": 326,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Ice Shard', a projectile ice ability, with validation, cooldown",
+   "shard": "combat_02.json"
+  },
+  {
+   "id": "rb-0327",
+   "index": 327,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the ice-themed projectile ability 'Ice Shard' that listens to VFXRemote.",
+   "shard": "vfx_06.json"
+  },
+  {
+   "id": "rb-0328",
+   "index": 328,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Arc Orb', a projectile lightning ability, with validation, cool",
+   "shard": "combat_02.json"
+  },
+  {
+   "id": "rb-0329",
+   "index": 329,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the lightning-themed projectile ability 'Arc Orb' that listens to VFXRem",
+   "shard": "vfx_06.json"
+  },
+  {
+   "id": "rb-0330",
+   "index": 330,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Poison Dart', a projectile poison ability, with validation, coo",
+   "shard": "combat_02.json"
+  },
+  {
+   "id": "rb-0331",
+   "index": 331,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the poison-themed projectile ability 'Poison Dart' that listens to VFXRe",
+   "shard": "vfx_06.json"
+  },
+  {
+   "id": "rb-0332",
+   "index": 332,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Holy Bolt', a projectile holy ability, with validation, cooldow",
+   "shard": "combat_02.json"
+  },
+  {
+   "id": "rb-0333",
+   "index": 333,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the holy-themed projectile ability 'Holy Bolt' that listens to VFXRemote",
+   "shard": "vfx_06.json"
+  },
+  {
+   "id": "rb-0334",
+   "index": 334,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Void Sphere', a projectile void ability, with validation, coold",
+   "shard": "combat_02.json"
+  },
+  {
+   "id": "rb-0335",
+   "index": 335,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the void-themed projectile ability 'Void Sphere' that listens to VFXRemo",
+   "shard": "vfx_06.json"
+  },
+  {
+   "id": "rb-0336",
+   "index": 336,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Plasma Cannon', a projectile plasma ability, with validation, c",
+   "shard": "combat_02.json"
+  },
+  {
+   "id": "rb-0337",
+   "index": 337,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the plasma-themed projectile ability 'Plasma Cannon' that listens to VFX",
+   "shard": "vfx_06.json"
+  },
+  {
+   "id": "rb-0338",
+   "index": 338,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Seed Shot', a projectile nature ability, with validation, coold",
+   "shard": "combat_02.json"
+  },
+  {
+   "id": "rb-0339",
+   "index": 339,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the nature-themed projectile ability 'Seed Shot' that listens to VFXRemo",
+   "shard": "vfx_06.json"
+  },
+  {
+   "id": "rb-0340",
+   "index": 340,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Flash Step', a dash lightning ability, with validation, cooldow",
+   "shard": "combat_02.json"
+  },
+  {
+   "id": "rb-0341",
+   "index": 341,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the lightning-themed dash ability 'Flash Step' that listens to VFXRemote",
+   "shard": "vfx_07.json"
+  },
+  {
+   "id": "rb-0342",
+   "index": 342,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Shadow Dash', a dash shadow ability, with validation, cooldown,",
+   "shard": "combat_02.json"
+  },
+  {
+   "id": "rb-0343",
+   "index": 343,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the shadow-themed dash ability 'Shadow Dash' that listens to VFXRemote.",
+   "shard": "vfx_07.json"
+  },
+  {
+   "id": "rb-0344",
+   "index": 344,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Wind Rush', a dash wind ability, with validation, cooldown, ser",
+   "shard": "combat_02.json"
+  },
+  {
+   "id": "rb-0345",
+   "index": 345,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the wind-themed dash ability 'Wind Rush' that listens to VFXRemote.",
+   "shard": "vfx_07.json"
+  },
+  {
+   "id": "rb-0346",
+   "index": 346,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Blood Charge', a dash blood ability, with validation, cooldown,",
+   "shard": "combat_02.json"
+  },
+  {
+   "id": "rb-0347",
+   "index": 347,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the blood-themed dash ability 'Blood Charge' that listens to VFXRemote.",
+   "shard": "vfx_07.json"
+  },
+  {
+   "id": "rb-0348",
+   "index": 348,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Comet Dive', a dash cosmic ability, with validation, cooldown, ",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0349",
+   "index": 349,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the cosmic-themed dash ability 'Comet Dive' that listens to VFXRemote.",
+   "shard": "vfx_07.json"
+  },
+  {
+   "id": "rb-0350",
+   "index": 350,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Inferno Aura', a self-buff fire ability, with validation, coold",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0351",
+   "index": 351,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the fire-themed self-buff ability 'Inferno Aura' that listens to VFXRemo",
+   "shard": "vfx_07.json"
+  },
+  {
+   "id": "rb-0352",
+   "index": 352,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Stoneskin', a self-buff earth ability, with validation, cooldow",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0353",
+   "index": 353,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the earth-themed self-buff ability 'Stoneskin' that listens to VFXRemote",
+   "shard": "vfx_07.json"
+  },
+  {
+   "id": "rb-0354",
+   "index": 354,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Blessing of Light', a self-buff holy ability, with validation, ",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0355",
+   "index": 355,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the holy-themed self-buff ability 'Blessing of Light' that listens to VF",
+   "shard": "vfx_07.json"
+  },
+  {
+   "id": "rb-0356",
+   "index": 356,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Hydro Barrier', a self-buff water ability, with validation, coo",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0357",
+   "index": 357,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the water-themed self-buff ability 'Hydro Barrier' that listens to VFXRe",
+   "shard": "vfx_07.json"
+  },
+  {
+   "id": "rb-0358",
+   "index": 358,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the server-side Luau ability module for 'Overgrowth', a self-buff nature ability, with validation, coold",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0359",
+   "index": 359,
+   "domain": "vfx",
+   "kind": "code",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write the client-side VFX handler for the nature-themed self-buff ability 'Overgrowth' that listens to VFXRemo",
+   "shard": "vfx_07.json"
+  },
+  {
+   "id": "rb-0360",
+   "index": 360,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a damage-over-time burn status effect called Burn in Luau with refresh-on-reapply, proper cleanup an",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0361",
+   "index": 361,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a damage-over-time poison status effect called Poison in Luau with refresh-on-reapply, proper cleanu",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0362",
+   "index": 362,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a damage-over-time bleed status effect called Bleed in Luau with refresh-on-reapply, proper cleanup ",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0363",
+   "index": 363,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a damage-over-time corrosion status effect called Corrosion in Luau with refresh-on-reapply, proper ",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0364",
+   "index": 364,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a heal-over-time regeneration status effect called Regen in Luau with refresh-on-reapply, proper cle",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0365",
+   "index": 365,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a strong heal-over-time blessing status effect called Blessing in Luau with refresh-on-reapply, prop",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0366",
+   "index": 366,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a movement slow status effect called Slow in Luau with refresh-on-reapply, proper cleanup and no sta",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0367",
+   "index": 367,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a movement speed boost status effect called Haste in Luau with refresh-on-reapply, proper cleanup an",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0368",
+   "index": 368,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a mild chill slow status effect called Chilled in Luau with refresh-on-reapply, proper cleanup and n",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0369",
+   "index": 369,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a adrenaline speed boost status effect called Adrenaline in Luau with refresh-on-reapply, proper cle",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0370",
+   "index": 370,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a stun crowd-control status effect called Stun in Luau with refresh-on-reapply, proper cleanup and n",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0371",
+   "index": 371,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a freeze crowd-control that anchors the target status effect called Freeze in Luau with refresh-on-r",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0372",
+   "index": 372,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a root crowd-control that blocks walking only status effect called Root in Luau with refresh-on-reap",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0373",
+   "index": 373,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a knockdown crowd-control using PlatformStand status effect called Knockdown in Luau with refresh-on",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0374",
+   "index": 374,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a damage-reduction debuff on outgoing damage status effect called Weaken in Luau with refresh-on-rea",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0375",
+   "index": 375,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a armor-break debuff that increases damage taken status effect called ArmorBreak in Luau with refres",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0376",
+   "index": 376,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a berserk damage buff status effect called Berserk in Luau with refresh-on-reapply, proper cleanup a",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0377",
+   "index": 377,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a fortify damage-reduction buff status effect called Fortify in Luau with refresh-on-reapply, proper",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0378",
+   "index": 378,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a curse that halves incoming healing status effect called Curse in Luau with refresh-on-reapply, pro",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0379",
+   "index": 379,
+   "domain": "combat",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Implement a marked-for-death debuff that increases damage taken status effect called Marked in Luau with refre",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0380",
+   "index": 380,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write a server-authoritative hitscan script for the Pistol in Luau with spread, distance falloff, headshot mul",
+   "shard": "combat_03.json"
+  },
+  {
+   "id": "rb-0381",
+   "index": 381,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write a server-authoritative hitscan script for the SMG in Luau with spread, distance falloff, headshot multip",
+   "shard": "combat_04.json"
+  },
+  {
+   "id": "rb-0382",
+   "index": 382,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write a server-authoritative hitscan script for the Assault Rifle in Luau with spread, distance falloff, heads",
+   "shard": "combat_04.json"
+  },
+  {
+   "id": "rb-0383",
+   "index": 383,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write a server-authoritative hitscan script for the Shotgun in Luau with spread, distance falloff, headshot mu",
+   "shard": "combat_04.json"
+  },
+  {
+   "id": "rb-0384",
+   "index": 384,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write a server-authoritative hitscan script for the Sniper Rifle in Luau with spread, distance falloff, headsh",
+   "shard": "combat_04.json"
+  },
+  {
+   "id": "rb-0385",
+   "index": 385,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write a server-authoritative hitscan script for the Revolver in Luau with spread, distance falloff, headshot m",
+   "shard": "combat_04.json"
+  },
+  {
+   "id": "rb-0386",
+   "index": 386,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write a server-authoritative hitscan script for the Minigun in Luau with spread, distance falloff, headshot mu",
+   "shard": "combat_04.json"
+  },
+  {
+   "id": "rb-0387",
+   "index": 387,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write a server-authoritative hitscan script for the Railgun in Luau with spread, distance falloff, headshot mu",
+   "shard": "combat_04.json"
+  },
+  {
+   "id": "rb-0388",
+   "index": 388,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write a server-authoritative hitscan script for the Laser Rifle in Luau with spread, distance falloff, headsho",
+   "shard": "combat_04.json"
+  },
+  {
+   "id": "rb-0389",
+   "index": 389,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write a server-authoritative hitscan script for the Crossbow in Luau with spread, distance falloff, headshot m",
+   "shard": "combat_04.json"
+  },
+  {
+   "id": "rb-0390",
+   "index": 390,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write a server-authoritative hitscan script for the Plasma Pistol in Luau with spread, distance falloff, heads",
+   "shard": "combat_04.json"
+  },
+  {
+   "id": "rb-0391",
+   "index": 391,
+   "domain": "combat",
+   "kind": "code",
+   "context": "server",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "Write a server-authoritative hitscan script for the Burst Rifle in Luau with spread, distance falloff, headsho",
+   "shard": "combat_04.json"
+  },
+  {
+   "id": "rb-0392",
+   "index": 392,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeInSine easing function in Luau (input t from 0 to 1) and show how to animate a value with it.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0393",
+   "index": 393,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeOutSine easing function in Luau (input t from 0 to 1) and show how to animate a value with it.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0394",
+   "index": 394,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeInOutSine easing function in Luau (input t from 0 to 1) and show how to animate a value with it.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0395",
+   "index": 395,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeInQuad easing function in Luau (input t from 0 to 1) and show how to animate a value with it.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0396",
+   "index": 396,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeOutQuad easing function in Luau (input t from 0 to 1) and show how to animate a value with it.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0397",
+   "index": 397,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeInOutQuad easing function in Luau (input t from 0 to 1) and show how to animate a value with it.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0398",
+   "index": 398,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeInCubic easing function in Luau (input t from 0 to 1) and show how to animate a value with it.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0399",
+   "index": 399,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeOutCubic easing function in Luau (input t from 0 to 1) and show how to animate a value with it.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0400",
+   "index": 400,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeInOutCubic easing function in Luau (input t from 0 to 1) and show how to animate a value with it",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0401",
+   "index": 401,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeInQuart easing function in Luau (input t from 0 to 1) and show how to animate a value with it.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0402",
+   "index": 402,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeOutQuart easing function in Luau (input t from 0 to 1) and show how to animate a value with it.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0403",
+   "index": 403,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeInOutQuart easing function in Luau (input t from 0 to 1) and show how to animate a value with it",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0404",
+   "index": 404,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeInQuint easing function in Luau (input t from 0 to 1) and show how to animate a value with it.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0405",
+   "index": 405,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeOutQuint easing function in Luau (input t from 0 to 1) and show how to animate a value with it.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0406",
+   "index": 406,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeInOutQuint easing function in Luau (input t from 0 to 1) and show how to animate a value with it",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0407",
+   "index": 407,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeInExpo easing function in Luau (input t from 0 to 1) and show how to animate a value with it.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0408",
+   "index": 408,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeOutExpo easing function in Luau (input t from 0 to 1) and show how to animate a value with it.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0409",
+   "index": 409,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeInOutExpo easing function in Luau (input t from 0 to 1) and show how to animate a value with it.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0410",
+   "index": 410,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeInCirc easing function in Luau (input t from 0 to 1) and show how to animate a value with it.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0411",
+   "index": 411,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeOutCirc easing function in Luau (input t from 0 to 1) and show how to animate a value with it.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0412",
+   "index": 412,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeInOutCirc easing function in Luau (input t from 0 to 1) and show how to animate a value with it.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0413",
+   "index": 413,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeInBack easing function in Luau (input t from 0 to 1) and show how to animate a value with it.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0414",
+   "index": 414,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeOutBack easing function in Luau (input t from 0 to 1) and show how to animate a value with it.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0415",
+   "index": 415,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeInOutBack easing function in Luau (input t from 0 to 1) and show how to animate a value with it.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0416",
+   "index": 416,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeInElastic easing function in Luau (input t from 0 to 1) and show how to animate a value with it.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0417",
+   "index": 417,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeOutElastic easing function in Luau (input t from 0 to 1) and show how to animate a value with it",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0418",
+   "index": 418,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeInOutElastic easing function in Luau (input t from 0 to 1) and show how to animate a value with ",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0419",
+   "index": 419,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeOutBounce easing function in Luau (input t from 0 to 1) and show how to animate a value with it.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0420",
+   "index": 420,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeInBounce easing function in Luau (input t from 0 to 1) built on a bounce-out helper.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0421",
+   "index": 421,
+   "domain": "easing",
+   "kind": "code",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Write the easeInOutBounce easing function in Luau (input t from 0 to 1) built on a bounce-out helper.",
+   "shard": "easing_01.json"
+  },
+  {
+   "id": "rb-0422",
+   "index": 422,
+   "domain": "architecture",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What are the three Luau type-checking modes and when should I use strict mode?",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0423",
+   "index": 423,
+   "domain": "architecture",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "When should I use table.freeze in Roblox Luau, and what are its limits?",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0424",
+   "index": 424,
+   "domain": "architecture",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "How do buffers differ from strings in Luau, and when are they the better choice?",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0425",
+   "index": 425,
+   "domain": "architecture",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "Explain task.spawn, task.defer and task.delay and when each is appropriate.",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0426",
+   "index": 426,
+   "domain": "architecture",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "Why prefer the task library over coroutine.wrap or coroutine.create for game code?",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0427",
+   "index": 427,
+   "domain": "networking",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "Which time function should I use: os.clock, os.time, tick, time or workspace:GetServerTimeNow?",
+   "shard": "networking_01.json"
+  },
+  {
+   "id": "rb-0428",
+   "index": 428,
+   "domain": "architecture",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What does StreamingEnabled change for client scripts, and how should I write code for it?",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0429",
+   "index": 429,
+   "domain": "misc",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "How do I reduce rendering cost from lots of parts in a Roblox map?",
+   "shard": "misc_01.json"
+  },
+  {
+   "id": "rb-0430",
+   "index": 430,
+   "domain": "combat",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "Why is the Touched event unreliable for combat, and what should I use instead?",
+   "shard": "combat_04.json"
+  },
+  {
+   "id": "rb-0431",
+   "index": 431,
+   "domain": "ai",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "When should I use an AnimationController instead of a Humanoid?",
+   "shard": "ai_01.json"
+  },
+  {
+   "id": "rb-0432",
+   "index": 432,
+   "domain": "ui",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "How do animation priorities work in Roblox and how do I avoid animation conflicts?",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0433",
+   "index": 433,
+   "domain": "physics",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "Why should I stop using BodyVelocity, BodyPosition and BodyGyro and what replaces them?",
+   "shard": "physics_01.json"
+  },
+  {
+   "id": "rb-0434",
+   "index": 434,
+   "domain": "ui",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What is the difference between Model:PivotTo and the old SetPrimaryPartCFrame?",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0435",
+   "index": 435,
+   "domain": "architecture",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "When should I use Attributes versus ValueObjects in Roblox?",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0436",
+   "index": 436,
+   "domain": "architecture",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What are the differences between BindableEvent and a custom Signal class?",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0437",
+   "index": 437,
+   "domain": "networking",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "Why should I avoid RemoteFunctions, especially InvokeClient?",
+   "shard": "networking_01.json"
+  },
+  {
+   "id": "rb-0438",
+   "index": 438,
+   "domain": "networking",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "When is an UnreliableRemoteEvent appropriate in Roblox?",
+   "shard": "networking_01.json"
+  },
+  {
+   "id": "rb-0439",
+   "index": 439,
+   "domain": "ui",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "How can I reduce network bandwidth used by remotes in a Roblox game?",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0440",
+   "index": 440,
+   "domain": "datastore",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What are the key DataStore limits and best practices?",
+   "shard": "datastore_01.json"
+  },
+  {
+   "id": "rb-0441",
+   "index": 441,
+   "domain": "networking",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What is MessagingService good for and what are its limits?",
+   "shard": "networking_01.json"
+  },
+  {
+   "id": "rb-0442",
+   "index": 442,
+   "domain": "datastore",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "When should I use MemoryStoreService instead of DataStores?",
+   "shard": "datastore_01.json"
+  },
+  {
+   "id": "rb-0443",
+   "index": 443,
+   "domain": "datastore",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "How do reserved servers and TeleportOptions work for parties?",
+   "shard": "datastore_01.json"
+  },
+  {
+   "id": "rb-0444",
+   "index": 444,
+   "domain": "vfx",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "How should I use ContentProvider:PreloadAsync to avoid hitches?",
+   "shard": "vfx_07.json"
+  },
+  {
+   "id": "rb-0445",
+   "index": 445,
+   "domain": "vfx",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What are best practices for 3D audio and mixing in Roblox?",
+   "shard": "vfx_07.json"
+  },
+  {
+   "id": "rb-0446",
+   "index": 446,
+   "domain": "vfx",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "How do Lighting technology options affect performance and visuals?",
+   "shard": "vfx_07.json"
+  },
+  {
+   "id": "rb-0447",
+   "index": 447,
+   "domain": "vfx",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "When should I use ParticleEmitters instead of many Parts for effects?",
+   "shard": "vfx_07.json"
+  },
+  {
+   "id": "rb-0448",
+   "index": 448,
+   "domain": "vfx",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "How do Beam and Trail settings affect performance?",
+   "shard": "vfx_07.json"
+  },
+  {
+   "id": "rb-0449",
+   "index": 449,
+   "domain": "misc",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "How can I reduce texture and UI image memory in Roblox?",
+   "shard": "misc_01.json"
+  },
+  {
+   "id": "rb-0450",
+   "index": 450,
+   "domain": "ai",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "Should I disable unused Humanoid states, and why?",
+   "shard": "ai_01.json"
+  },
+  {
+   "id": "rb-0451",
+   "index": 451,
+   "domain": "networking",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "Why can I not fully trust a player's character movement on the server, and what should I do?",
+   "shard": "networking_01.json"
+  },
+  {
+   "id": "rb-0452",
+   "index": 452,
+   "domain": "networking",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What are the common categories of Roblox exploits and how do I mitigate them?",
+   "shard": "networking_01.json"
+  },
+  {
+   "id": "rb-0453",
+   "index": 453,
+   "domain": "networking",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What are honeypot remotes and how should I use them responsibly?",
+   "shard": "networking_01.json"
+  },
+  {
+   "id": "rb-0454",
+   "index": 454,
+   "domain": "networking",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What should a complete server-side sanity check for a remote include?",
+   "shard": "networking_01.json"
+  },
+  {
+   "id": "rb-0455",
+   "index": 455,
+   "domain": "misc",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "Why use Rojo for Roblox development?",
+   "shard": "misc_01.json"
+  },
+  {
+   "id": "rb-0456",
+   "index": 456,
+   "domain": "architecture",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What do Selene and StyLua do for Luau projects?",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0457",
+   "index": 457,
+   "domain": "architecture",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "How can I unit test Luau code for Roblox?",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0458",
+   "index": 458,
+   "domain": "architecture",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "How do require caching and circular dependencies work in Roblox?",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0459",
+   "index": 459,
+   "domain": "combat",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What should I know about running code at the top level of a ModuleScript?",
+   "shard": "combat_04.json"
+  },
+  {
+   "id": "rb-0460",
+   "index": 460,
+   "domain": "architecture",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "Are metatable-based classes slow in Luau, and when does it matter?",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0461",
+   "index": 461,
+   "domain": "ui",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "How do table.create, table.clear and table.move help performance?",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0462",
+   "index": 462,
+   "domain": "architecture",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What is the best way to build large strings in Luau?",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0463",
+   "index": 463,
+   "domain": "architecture",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "Does creating Vector3 values allocate memory in Luau?",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0464",
+   "index": 464,
+   "domain": "architecture",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What are good debounce patterns in Roblox and what are the pitfalls?",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0465",
+   "index": 465,
+   "domain": "architecture",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What is the difference between Changed and GetPropertyChangedSignal?",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0466",
+   "index": 466,
+   "domain": "misc",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "Why is it recommended to set Parent last when creating Instances?",
+   "shard": "misc_01.json"
+  },
+  {
+   "id": "rb-0467",
+   "index": 467,
+   "domain": "architecture",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What is the difference between Destroy and setting Parent to nil?",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0468",
+   "index": 468,
+   "domain": "architecture",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "When should I use Debris:AddItem instead of task.delay for cleanup?",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0469",
+   "index": 469,
+   "domain": "physics",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "How should I design responsive UI that works on phones, tablets and desktops?",
+   "shard": "physics_01.json"
+  },
+  {
+   "id": "rb-0470",
+   "index": 470,
+   "domain": "ui",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What are the main UI performance pitfalls in Roblox?",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0471",
+   "index": 471,
+   "domain": "ui",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What are the costs of ViewportFrames and how do I use them wisely?",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0472",
+   "index": 472,
+   "domain": "camera",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "How do I correctly use a scriptable camera without fighting the default camera?",
+   "shard": "camera_01.json"
+  },
+  {
+   "id": "rb-0473",
+   "index": 473,
+   "domain": "misc",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "When should I use ContextActionService instead of UserInputService?",
+   "shard": "misc_01.json"
+  },
+  {
+   "id": "rb-0474",
+   "index": 474,
+   "domain": "ui",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What should I consider when optimizing a Roblox game for mobile?",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0475",
+   "index": 475,
+   "domain": "datastore",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "Why must ProcessReceipt be idempotent, and what are its rules?",
+   "shard": "datastore_01.json"
+  },
+  {
+   "id": "rb-0476",
+   "index": 476,
+   "domain": "ui",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "How should I use AnalyticsService to understand player behavior?",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0477",
+   "index": 477,
+   "domain": "networking",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What can Open Cloud be used for in a Roblox project?",
+   "shard": "networking_01.json"
+  },
+  {
+   "id": "rb-0478",
+   "index": 478,
+   "domain": "misc",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "How does localization work in Roblox?",
+   "shard": "misc_01.json"
+  },
+  {
+   "id": "rb-0479",
+   "index": 479,
+   "domain": "camera",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "What accessibility options should a Roblox game consider?",
+   "shard": "camera_01.json"
+  },
+  {
+   "id": "rb-0480",
+   "index": 480,
+   "domain": "misc",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "How should a team collaborate on a Roblox project?",
+   "shard": "misc_01.json"
+  },
+  {
+   "id": "rb-0481",
+   "index": 481,
+   "domain": "datastore",
+   "kind": "qa",
+   "context": "n/a",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "not_code"
+   ],
+   "instruction": "How can I implement feature flags and live-ops configuration in Roblox?",
+   "shard": "datastore_01.json"
+  },
+  {
+   "id": "rb-0482",
+   "index": 482,
+   "domain": "combat",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "This damage part hurts the player many times per second and sometimes errors. Find the problems and fix them.",
+   "shard": "combat_04.json"
+  },
+  {
+   "id": "rb-0483",
+   "index": 483,
+   "domain": "architecture",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Why does this loop behave badly and how should it be rewritten with modern Luau?",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0484",
+   "index": 484,
+   "domain": "datastore",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "This coin saving code can lose coins when two servers save at once. Fix it.",
+   "shard": "datastore_01.json"
+  },
+  {
+   "id": "rb-0485",
+   "index": 485,
+   "domain": "misc",
+   "kind": "debug_fix",
+   "context": "client",
+   "standalone_runnable": false,
+   "not_standalone_reasons": [
+    "needs_remotes_in_hierarchy"
+   ],
+   "instruction": "My client script hangs forever on startup sometimes. Diagnose and fix.",
+   "shard": "misc_01.json"
+  },
+  {
+   "id": "rb-0486",
+   "index": 486,
+   "domain": "architecture",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "This script errors for some players when they join. Find the cause.",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0487",
+   "index": 487,
+   "domain": "misc",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Some enemies are skipped when they die. Fix this removal loop.",
+   "shard": "misc_01.json"
+  },
+  {
+   "id": "rb-0488",
+   "index": 488,
+   "domain": "vfx",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "These tweens fight each other when the hit effect triggers repeatedly. Fix it.",
+   "shard": "vfx_07.json"
+  },
+  {
+   "id": "rb-0489",
+   "index": 489,
+   "domain": "combat",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "The weapon fires multiple times per click after re-equipping. Fix the connections.",
+   "shard": "combat_04.json"
+  },
+  {
+   "id": "rb-0490",
+   "index": 490,
+   "domain": "ui",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "This distance check runs for hundreds of entities every frame. Make it cheaper.",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0491",
+   "index": 491,
+   "domain": "misc",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Building this chat log string is slow and creates a lot of garbage. Improve it.",
+   "shard": "misc_01.json"
+  },
+  {
+   "id": "rb-0492",
+   "index": 492,
+   "domain": "vfx",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "The effect parts flash at the world origin before moving. Fix the creation order.",
+   "shard": "vfx_07.json"
+  },
+  {
+   "id": "rb-0493",
+   "index": 493,
+   "domain": "vfx",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "My gun's raycast keeps hitting the shooter's own character. Fix it.",
+   "shard": "vfx_07.json"
+  },
+  {
+   "id": "rb-0494",
+   "index": 494,
+   "domain": "misc",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "leaderstats sometimes shows 0 and data occasionally fails to load. Fix this player-join code.",
+   "shard": "misc_01.json"
+  },
+  {
+   "id": "rb-0495",
+   "index": 495,
+   "domain": "misc",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "This gamepass check breaks the script when Roblox services are slow. Fix it.",
+   "shard": "misc_01.json"
+  },
+  {
+   "id": "rb-0496",
+   "index": 496,
+   "domain": "ui",
+   "kind": "debug_fix",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "This server Script throws an error as soon as it runs. Fix it.",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0497",
+   "index": 497,
+   "domain": "ui",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "This ability creates a new ParticleEmitter every frame while charging. Fix the performance problem.",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0498",
+   "index": 498,
+   "domain": "ui",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "This unanchored orb jitters when I set its Position every frame. Fix it.",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0499",
+   "index": 499,
+   "domain": "networking",
+   "kind": "debug_fix",
+   "context": "server",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Players are bypassing my ability cooldown. What is wrong with this design?",
+   "shard": "networking_01.json"
+  },
+  {
+   "id": "rb-0500",
+   "index": 500,
+   "domain": "ui",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Each use of this dash adds a permanent connection. Fix the leak.",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0501",
+   "index": 501,
+   "domain": "vfx",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Footstep dust effects lag the server in busy matches. Fix the architecture.",
+   "shard": "vfx_07.json"
+  },
+  {
+   "id": "rb-0502",
+   "index": 502,
+   "domain": "architecture",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "This script breaks with StreamingEnabled because parts are missing on the client. Fix it.",
+   "shard": "architecture_02.json"
+  },
+  {
+   "id": "rb-0503",
+   "index": 503,
+   "domain": "networking",
+   "kind": "debug_fix",
+   "context": "client",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Cooldown timing is inconsistent between server and client with tick(). Fix it.",
+   "shard": "networking_01.json"
+  },
+  {
+   "id": "rb-0504",
+   "index": 504,
+   "domain": "ui",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "This loop searches the character for the same parts constantly. Optimize it.",
+   "shard": "ui_01.json"
+  },
+  {
+   "id": "rb-0505",
+   "index": 505,
+   "domain": "combat",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "Setting Health directly bypasses forcefields and can go below zero. Fix the damage code.",
+   "shard": "combat_04.json"
+  },
+  {
+   "id": "rb-0506",
+   "index": 506,
+   "domain": "ui",
+   "kind": "debug_fix",
+   "context": "shared_or_either",
+   "standalone_runnable": true,
+   "not_standalone_reasons": [],
+   "instruction": "This function creates a closure and table every frame in a hot loop. Reduce the garbage.",
+   "shard": "ui_01.json"
+  }
+ ]
+}
