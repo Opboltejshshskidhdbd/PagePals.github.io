@@ -6,15 +6,22 @@ from starlette.applications import Starlette
 from starlette.routing import Route
 from starlette.requests import Request
 from starlette.responses import JSONResponse
-from mcp.server.fastmcp import FastMCP
+# Yahan sirf import change kiya hai latest SDK ke liye
 from mcp.server.sse import SseServerTransport
+from mcp.server.fastmcp import FastMCP as MCPServer # Ya direct FastMCP import fallback handle karne ke liye.
+import mcp
+
+# Check karte hain ki library kis format me aayi hai
+try:
+    from mcp.server.fastmcp import FastMCP
+    mcp_app = FastMCP("luau-validator-bridge")
+except ImportError:
+    from mcp.server.mcp_server import MCPServer
+    mcp_app = MCPServer("luau-validator-bridge")
 
 from src.validator_client import validate_luau_source, ValidatorError
 
-# V2 Syntax: FastMCP instead of raw Server
-mcp = FastMCP("luau-validator-bridge")
-
-@mcp.tool()
+@mcp_app.tool()
 async def validate_external_luau(code: str) -> str:
     """
     Sends Luau source code to an external validator API and returns the exact diagnostic results.
@@ -36,9 +43,9 @@ async def sse_endpoint(request: Request):
     global sse_transport
     sse_transport = SseServerTransport("/message")
     
-    # Run the FastMCP internal server using SSE transport
     async def run_server():
-        await mcp._mcp_server.run(
+        # Ye internal server run karne ka updated syntax he
+        await mcp_app._mcp_server.run(
             sse_transport.create_initialization_options(),
             sse_transport.create_message_handler(),
             sse_transport.create_error_handler(),
